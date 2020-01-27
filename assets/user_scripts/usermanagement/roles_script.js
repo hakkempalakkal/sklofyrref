@@ -1,9 +1,4 @@
-// var readarray = [];
-// $(".readpermissions").each(function(){
-//   readarray.push($(this).val());
-// });
-// console.log(readarray);
-    //add roles
+
 
     var readarray=[];
     var updatearray=[];
@@ -73,13 +68,7 @@
     }
 
 
-    //update roles
-//     var updatearray = [];
-// $(".updatereadpermissions").each(function(){
-//   updatearray.push($(this).val());
-// });
 
-// console.log(updatearray);
    
    $(function () {
     $('.updatereadpermissions').on('ifChanged', function(event) {
@@ -131,16 +120,18 @@
       });
       request.done( function ( data ) {
         //console.log(data);
-      if(!alert('roles updated Successfully!')){window.location.reload();}
-     {window.location.href="roles"}
+        alert('roles updated Successfully!');
+    //   if(!alert('roles updated Successfully!')){window.location.reload();}
+    //  {window.location.href="roles"}
       });
       request.fail( function ( jqXHR, textStatus) {
-       
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('roles updated Successfully!')){window.location.href="roles"}
+        alert('roles updated Successfully!');
+        window.location.href="roles";
+      //  if (jqXHR.responseText=="success")
+      //  {
+      //   if(!alert('roles updated Successfully!')){window.location.href="roles"}
     
-       }
+      //  }
       });
     }
 

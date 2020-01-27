@@ -111,7 +111,7 @@
               </a>
            
             </li>
-            <li class="treeview hidden">
+            <li class="treeview ">
               <a href="<?php echo base_url(); ?>client-search">
                 <i class="fa fa-search"></i> <span>Client View </span> <i class=""></i>
               </a>

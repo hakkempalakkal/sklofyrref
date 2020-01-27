@@ -182,7 +182,7 @@
    <div class="row">
       <div class="col-md-12">
       <h3 class="box-title"> Credit Note </h3>
-         <div class="box ">
+         <div class="box">
            <div class="box-header with-border">
            <input type="submit" onclick="createcreditnote();" style="float: right; width:150px;" class="btn btn-block btn-success" value="Create Creditnote">
 

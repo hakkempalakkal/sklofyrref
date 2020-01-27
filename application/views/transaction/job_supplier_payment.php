@@ -210,7 +210,8 @@
          </div>
       </div>
    </div>
-   </div>
+ 
+                         
    </section>
 <script src="<?php echo base_url(); ?>/assets/user_scripts/transaction/job_supplier_payment.js"></script>
 <!-- <script type="text/javascript"> -->

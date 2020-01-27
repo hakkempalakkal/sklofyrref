@@ -35,25 +35,25 @@
                                 <div class="form-group col-md-6">
 									<label>A/C No.</label><span id="accmessage"></span>
 									
-									<input type="text" required class="form-control" id="acc-no"  onblur="checkacc()" name="acc-no">
+									<input type="text" required class="form-control" id="acc-no"  onblur="checkacc()" name="acc-no" placeholder="Enter AC/No">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>IBAN</label>
 									
-										<input type="text" required  class="form-control" id="iban" name="iban">
+										<input type="text" required  class="form-control" id="iban" name="iban" placeholder="Enter IBAN">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Opening Balance</label>
 									
-										<input type="text" required class="form-control" id="opbal" name="opbal">
+										<input type="text" required class="form-control" id="opbal" name="opbal" placeholder="Enter Opening Balance">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Other Information if any</label>
 									
-										<input type="text"  class="form-control" id="otherinfo" name="otherinfo">
+										<input type="text"  class="form-control" id="otherinfo" name="otherinfo" placeholder="Other information if any">
 								
                                 </div>
                          

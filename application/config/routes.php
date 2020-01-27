@@ -67,35 +67,35 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 // permission
-$route['permission'] = 'usermanagement/permission/index';
+$route['permission'] = 'usermanagement/Permission/index';
 
-$route['permission-create'] = 'usermanagement/permission/create';
-$route['permission-edit'] = 'usermanagement/permission/edit';
+$route['permission-create'] = 'usermanagement/Permission/create';
+$route['permission-edit'] = 'usermanagement/Permission/edit';
 //js permission
-$route['permission-store'] = 'usermanagement/permission/store';
-$route['permission-update'] = 'usermanagement/permission/update';
+$route['permission-store'] = 'usermanagement/Permission/store';
+$route['permission-update'] = 'usermanagement/Permission/update';
 //roles
-$route['roles'] = 'usermanagement/roles/index';
-$route['roles-create'] = 'usermanagement/roles/create';
-$route['roles-edit'] = 'usermanagement/roles/edit';
+$route['roles'] = 'usermanagement/Roles/index';
+$route['roles-create'] = 'usermanagement/Roles/create';
+$route['roles-edit'] = 'usermanagement/Roles/edit';
 
 // js roles
-$route['roles-store'] = 'usermanagement/roles/store';
-$route['roles-update'] = 'usermanagement/roles/update';
+$route['roles-store'] = 'usermanagement/Roles/store';
+$route['roles-update'] = 'usermanagement/Roles/update';
  
 //users
-$route['users'] = 'usermanagement/users/index';
-$route['users-create'] = 'usermanagement/users/add';
-$route['users-store'] = 'usermanagement/users/store';
+$route['users'] = 'usermanagement/Users/index';
+$route['users-create'] = 'usermanagement/Users/add';
+$route['users-store'] = 'usermanagement/Users/store';
 
-$route['users-edit'] = 'usermanagement/users/edit';
-$route['users-enable-status/(:any)'] = 'usermanagement/users/enable_status/$1';
-$route['users-disable-status/(:any)'] = 'usermanagement/users/disable_status/$1';
-$route['checkMail'] = 'usermanagement/users/checkMail';
+$route['users-edit'] = 'usermanagement/Users/edit';
+$route['users-enable-status/(:any)'] = 'usermanagement/Users/enable_status/$1';
+$route['users-disable-status/(:any)'] = 'usermanagement/Users/disable_status/$1';
+$route['checkMail'] = 'usermanagement/Users/checkMail';
 
 
 
-$route['users-update'] = 'usermanagement/users/update';
+$route['users-update'] = 'usermanagement/Users/update';
 
 //login
 $route['user-login']='usermanagement/Login/index';
@@ -114,14 +114,14 @@ $route['bank-store'] = 'masters/Bank_controller/store';
 $route['bank-update'] = 'masters/Bank_controller/update';
 
 //Master-carrier
-$route['carrier']='masters/carrier_controller/index';
-$route['create_carrier']='masters/carrier_controller/add';
-$route['carrier-edit'] = 'masters/carrier_controller/edit';
-$route['carrier-enable-status/(:any)'] ='masters/carrier_controller/enable_status/$1';
-$route['carrier-disable-status/(:any)'] = 'masters/carrier_controller/disable_status/$1';
+$route['carrier']='masters/Carrier_controller/index';
+$route['create_carrier']='masters/Carrier_controller/add';
+$route['carrier-edit'] = 'masters/Carrier_controller/edit';
+$route['carrier-enable-status/(:any)'] ='masters/Carrier_controller/enable_status/$1';
+$route['carrier-disable-status/(:any)'] = 'masters/Carrier_controller/disable_status/$1';
 // js carrier
-$route['carrier-store'] = 'masters/carrier_controller/store';
-$route['carrier-update'] = 'masters/carrier_controller/update';
+$route['carrier-store'] = 'masters/Carrier_controller/store';
+$route['carrier-update'] = 'masters/Carrier_controller/update';
 
 //master description
 $route['description'] = 'masters/Description/index';

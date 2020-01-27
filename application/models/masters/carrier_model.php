@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class carrier_model extends CI_Model {
+class Carrier_model extends CI_Model {
 
     public function list()
 {

@@ -22,11 +22,11 @@
                     </div>
                   <div class="form-group col-md-6">
                       <label for="exampleInputname1">Code</label>
-                      <input type="text" id="code"  name="code" class="form-control"readonly="readonly" placeholder="<?php  echo $value[0]->code;?>"  value="<?php  echo $value[0]->code;?>">
+                      <input type="text" id="code"  name="code" class="form-control"  value="<?php  echo $value[0]->code;?>">
                     </div>
                                 <div class="form-group col-md-6">
                       <label for="exampleInputname1">Name</label>
-                      <input type="text" id="name"  name="name" class="form-control"  value="<?php  echo $value[0]->name;?>" id="name" placeholder="Enter name" >
+                      <input type="text" id="name"  name="name" class="form-control"  value="<?php  echo $value[0]->name;?>" id="name"  >
                       <input type="hidden" name="id" id="id"  value="<?php  echo $value[0]->id;?>" />
                     </div>
 

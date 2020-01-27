@@ -18,11 +18,11 @@
 <div class=" row">
                     <div class="form-group col-md-6">
                       <label for="code">Name</label>
-                      <input type="text" class="form-control" required id="client_name" placeholder="Enter cliet name">
+                      <input type="text" class="form-control" required id="client_name" placeholder="Enter client name">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="code">Name Arabic</label>
-                      <input type="text" class="form-control" required id="client_name_arabic" placeholder="Enter cliet name">
+                      <input type="text" class="form-control" required id="client_name_arabic" placeholder="Enter client name in Arabic">
                     </div></div>
                     <div class=" row">
                     <div class="form-group col-md-6">
@@ -31,17 +31,17 @@
                     </div>
                     <div class="form-group col-md-6">
                       <label for="code">Contact Person Arabic</label>
-                      <input type="text" class="form-control" required id="contact_person_arabic" placeholder="Enter contact person">
+                      <input type="text" class="form-control" required id="contact_person_arabic" placeholder="Enter contact person in Arabic">
                     </div>
 </div>
 <div class=" row">
                     <div class="form-group col-md-6">
                       <label for="code">Address</label>
-                      <input type="text" class="form-control" required id="client_address" placeholder="Enter supplier address">
+                      <input type="text" class="form-control" required id="client_address" placeholder="Enter client address">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="code">Address Arabic</label>
-                      <input type="text" class="form-control" required id="client_address_arabic" placeholder="Enter supplier address">
+                      <input type="text" class="form-control" required id="client_address_arabic" placeholder="Enter client address in Arabic">
                     </div></div>
                     <div class=" row">
                     <div class="form-group col-md-6">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group col-md-6">
                       <label for="code">Country Arabic</label>
-                      <input type="text" class="form-control" required id="client_country_arabic" placeholder="Enter country">
+                      <input type="text" class="form-control" required id="client_country_arabic" placeholder="Enter country in Arabic">
                     </div></div>
                     
                     <div class=" row">
@@ -66,12 +66,12 @@
                     </div>
                     <div class="form-group col-md-6">
                       <label for="code">Remarks Arabic</label>
-                      <input type="text" class="form-control" required id="client_remarks_arabic" placeholder="Enter remarks">
+                      <input type="text" class="form-control" required id="client_remarks_arabic" placeholder="Enter remarks in arabic">
                     </div></div>
                     <div class=" row">
                     <div class="form-group col-md-6">
                       <label for="code">Vendror Id</label>
-                      <input type="text" class="form-control" required id="vendor_id" placeholder="Enter remarks">
+                      <input type="text" class="form-control" required id="vendor_id" placeholder="Enter vendor ID">
                     </div></div>
                     <div class=" row">
                     <div class="form-group col-md-6">

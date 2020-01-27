@@ -106,7 +106,7 @@ visibility: hidden
                    
                     </label>  &nbsp; &nbsp;
                     <label>
-                    <button class="btn btn-primary nextBtn pull-right trans-type" id="transportation" type="button" value="Transportation">Transportation</button>
+                    <button class="btn btn-primary nextBtn pull-right trans-type" id="transportation" type="button" value="Other">Other</button>
                    
                     
                     </label>  &nbsp; &nbsp;
@@ -213,9 +213,9 @@ foreach($clientlist as $client)
                       <?php 
 
 foreach($carrierlist as $carrier)
-{ 
-  echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'</option>';
-  
+{ if($carrier->carrier_type=="Air"){
+  echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'&nbsp;'.$carrier->code.'</option>';
+}
 
 }
 ?>
@@ -268,8 +268,9 @@ foreach($carrierlist as $carrier)
 
 foreach($carrierlist as $carrier)
 { 
-  echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'</option>';
-  
+    if($carrier->carrier_type=="Sea"){
+        echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'&nbsp;'.$carrier->code.'</option>';
+    }
 
 }
 ?>
@@ -340,8 +341,9 @@ foreach($carrierlist as $carrier)
 
 foreach($carrierlist as $carrier)
 { 
-  echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'</option>';
-  
+    if($carrier->carrier_type=="Other"){
+        echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'&nbsp;'.$carrier->code.'</option>';
+    }
 
 }
 ?>
@@ -397,8 +399,9 @@ foreach($carrierlist as $carrier)
 
 foreach($carrierlist as $carrier)
 { 
-  echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'</option>';
-  
+    if($carrier->carrier_type=="Land"){
+    echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'&nbsp;'.$carrier->code.'</option>';
+    }
 
 }
 ?>
@@ -524,7 +527,7 @@ foreach($userlist as $user)
                     <input maxlength="100" type="text" id="unitprice"  class="form-control " placeholder=" unit price" />
                 </div>
                 <div class="form-group col-md-2">
-                <label class="control-label"></label>
+                <label class="control-label">Currency</label>
                       <select class="form-control" id="unit_price" name="unit_price"  value="--Select Type--">
                       <option value="bank">--Select Type--</option>
                       <?php 
@@ -550,16 +553,7 @@ foreach($currencylist as $currency)
                     <label class="control-label">VAT</label>
                     <input maxlength="100" type="text" id="vat"  class="form-control" placeholder=" vat" />
                 </div>
-                <!-- <div class="form-group col-md-1">
-                <label for="exampleInputname1">Unit </label>
-                      <select class="form-control" id="unit" name="unit"  value="--Select Type--">
-                      <option value="">--Select Type--</option>
-                        <option value="EACH">EACH</option>
-                        <option value="KG">KG</option>
-                        <option value="CubicMeter">CubicMeter</option>
-                        <option value="CubicFoot">CubicFoot</option>
-                      </select>
-                </div>   -->
+              
                 <input type="submit" name="add" value="ADD"  id="add" class="btn btn-success" style="float: right;">
           </div>
       <div class="col-md-12">

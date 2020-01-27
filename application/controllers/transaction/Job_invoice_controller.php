@@ -16,7 +16,7 @@ class Job_invoice_controller extends CI_Controller {
 		 $this->load->helper('url');
         
       $this->load->model('masters/Shipper_model');
-     $this->load->model('transaction/job_invoice_model');
+     $this->load->model('transaction/Job_invoice_model');
      $this->load->model('transaction/Transaction_model');
 	}
 
@@ -28,10 +28,10 @@ class Job_invoice_controller extends CI_Controller {
 		$result['roles']=$this->Login_model->userdetails($user_id);
        	$user_image['values']=$res[0]->user_image;
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
-        $result['bank']=$this->job_invoice_model->select_all_bank();
-        $result['jobdata']=$this->job_invoice_model->select_job_details($id);
+        $result['bank']=$this->Job_invoice_model->select_all_bank();
+        $result['jobdata']=$this->Job_invoice_model->select_job_details($id);
       
-        $result['Inv']=$this->job_invoice_model->selectcode();
+        $result['Inv']=$this->Job_invoice_model->selectcode();
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
 		$this->load->view('transaction/job_invoice',$result);
@@ -40,7 +40,7 @@ class Job_invoice_controller extends CI_Controller {
     public function getdata($value)
     {
 	
-          $result= $this->job_invoice_model->list_description($value);
+          $result= $this->Job_invoice_model->list_description($value);
           echo json_encode($result);
             
 	  }
@@ -50,7 +50,7 @@ public function insert_job_details()
 		 $data=$this->input->post('postData');
 	
 		$jobdata=$data["JobDetails"];
-		$result=$this->job_invoice_model->addjobmaster($data["JobData"]);
+		$result=$this->Job_invoice_model->addjobmaster($data["JobData"]);
 		$my_values = array();
 		if($result!=0)
 		{
@@ -60,7 +60,7 @@ public function insert_job_details()
 				$row["InvoiceMasterId"]=$result;
 				$row["Vat"]=floatval($row["Vat"]);
 				$row["Total"]=floatval($row["Total"]);
-				$this->job_invoice_model->addjobinvoicedetailsinsert($row);
+				$this->Job_invoice_model->addjobinvoicedetailsinsert($row);
 				$my_values[] = $row;
 			}
 		}
@@ -73,8 +73,8 @@ public function insert_job_details()
 	{
 		$invid=$invid;
 
-		$result['invoicedata']=$this->job_invoice_model->selectinvoicedetails($invid);
-		 $result['invoice']=$this->job_invoice_model->select_job_invoice_details($invid);
+		$result['invoicedata']=$this->Job_invoice_model->selectinvoicedetails($invid);
+		 $result['invoice']=$this->Job_invoice_model->select_job_invoice_details($invid);
 
 		$this->load->view('transaction/invoice',$result);
 	
@@ -89,10 +89,10 @@ public function insert_job_details()
 		$result['roles']=$this->Login_model->userdetails($user_id);
        	$user_image['values']=$res[0]->user_image;
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
-		$data['bank']=$this->job_invoice_model->select_all_bank();
+		$data['bank']=$this->Job_invoice_model->select_all_bank();
 
-		$data['invoicedata']=$this->job_invoice_model->editinvoicedetails($invid);
-		$data['invoice']=$this->job_invoice_model->select_job_invoice_details($invid);
+		$data['invoicedata']=$this->Job_invoice_model->editinvoicedetails($invid);
+		$data['invoice']=$this->Job_invoice_model->select_job_invoice_details($invid);
 	
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
@@ -109,7 +109,7 @@ public function insert_job_details()
 		$jobdata=$data["JobDetails"];
 		$id=$data["Id"];
 		$deletedids=$data["deleted"];
-		$result=$this->job_invoice_model->updateJobinvoicemaster($id,$data["JobData"]);
+		$result=$this->Job_invoice_model->updateJobinvoicemaster($id,$data["JobData"]);
 		$my_values = array();
 		if($jobdata!="")
 		{
@@ -118,7 +118,7 @@ public function insert_job_details()
 				$row["InvoiceMasterId"]=$id;
 				$row["Vat"]=floatval($row["Vat"]);
 				$row["Total"]=floatval($row["Total"]);
-				$this->job_invoice_model->insertjobinvoicedetails($row);
+				$this->Job_invoice_model->insertjobinvoicedetails($row);
 				$my_values[] = $row;
 		}
 		}
@@ -127,7 +127,7 @@ public function insert_job_details()
 		foreach($deletedids as $row)
 		{
 				$id=$row;
-				$result=$this->job_invoice_model->deleteinvoicedetailsinsert($id);
+				$result=$this->Job_invoice_model->deleteinvoicedetailsinsert($id);
 			
 		}
 	}

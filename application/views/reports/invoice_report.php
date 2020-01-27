@@ -18,14 +18,14 @@
                   <div class="form-horizontal form-label-left">
                     <div class="form-group">
                       <label for="fullname">Starting Date :</label>
-                        <input name="ctl00$ContentPlaceHolder1$txtFromDate" type="text" id="ContentPlaceHolder1_txtFromDate" class="date form-control hasDatepicker" autocomplete="off">
+                        <input name="ctl00$ContentPlaceHolder1$txtFromDate" type="date" id="ContentPlaceHolder1_txtFromDate" class="date form-control hasDatepicker" autocomplete="off">
                     </div>
                   </div>
                 </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label for="fullname">Ending Date :</label>
-                        <input name="ctl00$ContentPlaceHolder1$txtToDate" type="text" id="ContentPlaceHolder1_txtToDate" class="date form-control hasDatepicker" autocomplete="off">
+                        <input name="ctl00$ContentPlaceHolder1$txtToDate" type="date" id="ContentPlaceHolder1_txtToDate" class="date form-control hasDatepicker" autocomplete="off">
                     </div>
                   </div>
                     <div class="col-md-2">

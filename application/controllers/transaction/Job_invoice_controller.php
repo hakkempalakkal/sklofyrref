@@ -30,7 +30,8 @@ class Job_invoice_controller extends CI_Controller {
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
         $result['bank']=$this->job_invoice_model->select_all_bank();
         $result['jobdata']=$this->job_invoice_model->select_job_details($id);
-      
+		$result['currency']=$this->job_invoice_model->select_currency();
+
         $result['Inv']=$this->job_invoice_model->selectcode();
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);

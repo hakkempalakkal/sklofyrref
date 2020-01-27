@@ -1,6 +1,6 @@
 <?php 
-   // var_dump($jobdata);
-   // var_dump ($Inv);
+   // var_dump($currency);
+  
    // die();
    $month = date('m');
    $day = date('d');
@@ -62,16 +62,15 @@
                                  <label class="control-label"></label>
                                  <select class="form-control" id="unit_price" name="unit_price"  value="--Select Type--">
                                     <option value="bank">--Select Type--</option>
-                                    <option value="INR">INR</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="USD">USD</option>
-                                    <option value="AED">AED</option>6
+                                  
                                   <?php 
                                   foreach($currency as $key=>$value)
                                   {
 ?>
                                  <option value="<?php echo $value->currency;?>"><?php echo $value->currency;?></option>
-                                  <?php } ?>
+                                  <?php
+                                  }
+                                   ?>
                                  </select>
                                  </select>
                               </div>

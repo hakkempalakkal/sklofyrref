@@ -1,36 +1,32 @@
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1"><title>
-    FERRY FOLKS
 
-</title>
-<link href="<?php echo base_url(); ?>/assets/invoicereport/style.css" rel="stylesheet" />
+<head id="Head1">
+	<title>
+	FERRY FOLKS
+	</title>
+	<link href="<?php echo base_url(); ?>/assets/invoicereport/style.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/invoicereport/bootstrap.css" />
-    <style>
-        @media print
-        {
-            .f-fix
-            {
-                position: fixed;
-                bottom: 0;
-            }
+	<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/invoicereport/bootstrap.css" />
+	<style>
+		@media print {
+			.f-fix {
+				position: fixed;
+				bottom: 0;
+			}
 
-            .fr
-            {
-                padding-right: 17px;
-            }
+			.fr {
+				padding-right: 17px;
+			}
 
-            @page
-            {
-                margin-top: 0; /* this affects the margin in the printer settings */
-                margin-bottom: 0;
-            }
-        }
-    </style>
+			@page {
+				margin-top: 0;
+				/* this affects the margin in the printer settings */
+				margin-bottom: 0;
+			}
+		}
+	</style>
 </head>
 <body>
   

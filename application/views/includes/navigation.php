@@ -111,7 +111,10 @@
               </a>
            
             </li>
+<<<<<<< HEAD
             
+=======
+>>>>>>> 01b4dcd769c7e62f7fa180f6f6d3f1ac41a293cd
             <li class="treeview ">
               <a href="<?php echo base_url(); ?>client-search">
                 <i class="fa fa-search"></i> <span>Client View </span> <i class=""></i>

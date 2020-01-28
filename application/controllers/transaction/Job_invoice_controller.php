@@ -28,10 +28,18 @@ class Job_invoice_controller extends CI_Controller {
 		$result['roles']=$this->Login_model->userdetails($user_id);
        	$user_image['values']=$res[0]->user_image;
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
+<<<<<<< HEAD
         $result['bank']=$this->Job_invoice_model->select_all_bank();
         $result['jobdata']=$this->Job_invoice_model->select_job_details($id);
       
         $result['Inv']=$this->Job_invoice_model->selectcode();
+=======
+        $result['bank']=$this->job_invoice_model->select_all_bank();
+        $result['jobdata']=$this->job_invoice_model->select_job_details($id);
+		$result['currency']=$this->job_invoice_model->select_currency();
+
+        $result['Inv']=$this->job_invoice_model->selectcode();
+>>>>>>> 01b4dcd769c7e62f7fa180f6f6d3f1ac41a293cd
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
 		$this->load->view('transaction/job_invoice',$result);

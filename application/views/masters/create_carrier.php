@@ -20,10 +20,10 @@
                   <div class="form-group col-md-6 ">
                       <label>Carrier Type</label>
                       <select class="form-control" name="carrier_type" id="carrier_type" value="">
-                      <option value="land">Air</option>
-                      <option value="land">Sea</option>
-                      <option value="land">Other</option>
-                        <option value="transportation">Land</option>
+                      <option value="Air">Air</option>
+                      <option value="Sea">Sea</option>
+                      <option value="Other">Other</option>
+                        <option value="Land">Land</option>
                       </select>
                     </div>
                     <div class="form-group col-md-6">
@@ -36,7 +36,7 @@
                     </div>
                                
                   
-                                <div class="form-group col-md-6">
+                                <!-- <div class="form-group col-md-6">
 									<label>Contact Person</label>
 									
 									<input type="text" class="form-control" id="contact" name="contact" placeholder="Enter Contact Person">
@@ -83,13 +83,13 @@
 									
 									<input type="text" class="form-control" id="remarks" name="remarks" placeholder="Enter Remarks">
 								
-                                </div>
+                                </div> -->
                               
                                
                                
 </div>
                   <div class="box-footer">
-                    <button type="button"  onclick="store();" class="btn btn-success">Save</button>
+                    <input type="submit"  onclick="store();" class="btn btn-success"></input>
                     <button type="reset"  class="btn btn-success">Cancel</button>
                   </div>
                 </form>

@@ -1,3 +1,4 @@
+
 $(function () {
     $('.input-group-addon.beautiful').each(function () {
         

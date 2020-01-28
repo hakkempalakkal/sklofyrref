@@ -24,6 +24,14 @@
     
   
     }
+    //  function nextbutton()
+    // {
+    //   $(document).ready(function()
+    //   {
+    //     $( "#tabs" ).tabs( "select" , 3 ) ;
+    //   });
+    // }
+    //$('#txtPropHPhone').val() + '<br/>' + $(txtPropWPhone').val();
   //  update
     function update()
     {
@@ -39,7 +47,7 @@
         var Destination=$("#destination_air").val();
         var carrier=$("#Carrier_air").val();
         var PoNo=$("#PoNo_air").val();
-        var Mawb=$("#Mawb_air").val();
+        var Mawb=$("#Mawb_air").val()+'-'+$("#Mawb_code").val();
         var Nopcs=$("#Nopcs_air").val();
         var ActualWeight=$("#ActualWeight_air").val();
         var ChargeableWeight=$("#ChargeableWeight_air").val();
@@ -169,6 +177,27 @@ console.log(result[0].description);
   });
 
 }
+
+//get carrier
+// function getcarriera()
+// {
+ 
+// postData=$('#Carrier_air').val();
+
+// var request = $.ajax({
+//   url: 'transportation-carrier/'+postData,
+//   type: 'GET',
+//   dataType: 'JSON'
+//   });
+//   request.done( function (result) {
+//     console.log(result);
+//   var values=JSON.stringify(result);
+//   $('.mawbcarrier').val(result[0].code);
+// console.log(result[0].code);
+//   });
+
+// }
+
 //view job details
 function jobdetails()
 {
@@ -260,3 +289,14 @@ var estimate_master_details =[];
       }
     });
 }
+
+//onchange carrier and mawb
+$(document).ready(function()
+{
+  $( "#Carrier_air" ).change(function() {
+    var element = $(this).find('option:selected'); 
+    var myTag = element.attr("code"); 
+    $("#Mawb_air").val(myTag);
+    console.log($(this).attr("code"));
+  });
+});

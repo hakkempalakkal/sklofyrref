@@ -50,7 +50,7 @@ defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREA
 
 //image upload path
 define( 'ROOT_DIR', dirname(__FILE__) );
-define('IMAGE_PATH' , (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/ferryfolks/" . '/assets/images/');
+define('IMAGE_PATH' , (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/Ferryfolkshub/sklofyrref/" . '/assets/images/');
 define('UPLOAD_PATH' , ROOT_DIR . '/../../assets/images/');
 /*
 |--------------------------------------------------------------------------

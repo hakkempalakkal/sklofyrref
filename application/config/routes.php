@@ -223,6 +223,7 @@ $route['transportation-update'] = 'transaction/Transaction/update';
 $route['transportation-description/(:any)'] = 'transaction/Transaction/getdescription/$1';
 $route['transportation-jobdetails/(:any)'] = 'transaction/Transaction/jobdetails/$1';
 $route['transportation-estimate'] = 'transaction/Transaction/store_estimate';
+$route['transportation-carrier/(:any)'] = 'transaction/Transaction/getcarrier/$1';
 //invoice
 //job-invoice
 $route['job-invoice/(:any)'] = 'transaction/Job_invoice_controller/job_invoice/$1';

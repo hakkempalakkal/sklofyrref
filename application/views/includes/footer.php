@@ -1,6 +1,6 @@
 </div><!-- /.content-wrapper -->
 
-      <footer class="main-footer">
+      <footer class="main-footer" id="foot">
         <div class="pull-right hidden-xs">
           <b></b> 
         </div>

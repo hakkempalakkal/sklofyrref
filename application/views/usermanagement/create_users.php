@@ -1,3 +1,4 @@
+<script src="<?php echo base_url(); ?>/assets/js/radio_button.js"></script>
 <section class="content-header">
   <h1>
     New User

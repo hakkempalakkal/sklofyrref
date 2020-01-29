@@ -1,7 +1,6 @@
 <?php 
-   // var_dump($jobdata);
-   // var_dump ($Inv);
-   // die();
+ 
+
    $month = date('m');
    $day = date('d');
    $year = date('Y');

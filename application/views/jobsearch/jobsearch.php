@@ -1,3 +1,7 @@
+<?php  
+// var_dump($permission);
+// die();
+?>
 <section class="content">
 <input type="hidden" value="<?php echo base_url(); ?>" id="baseurl"/>
       <div class="row">
@@ -148,9 +152,15 @@
       <h3 class="box-title"> Generated Invoices </h3>
          <div class="box ">
            <div class="box-header with-border">
-         <input type="submit" onclick="createnewinvoice();" style="float: right; width:150px;" class="btn btn-block btn-success" value="Create new invoice">
+           <?php 
+          
+          if (in_array("create invoice",$permission))
+          { 
+             ?>
+           <input type="submit" onclick="createnewinvoice();" style="float: right; width:150px;" class="btn btn-block btn-success" value="Create new invoice">
            <!-- <span class="new-button" style="float: right;" onclick="createnewinvoice();"><a href=" " class="btn btn-success btn-sm" ><span class="fa fa-plus"></span> &nbsp;Create Invoice </a></span> -->
-           </div>
+          <?php } ?>
+         </div>
            
             <div class="box-body">
     
@@ -165,7 +175,13 @@
                         <th> SubTotal</th>
                         <th>  Vat</th>
                         <th style='text-align: right;'>  Grand Total</th>
+                        <?php 
+          
+          if (in_array("update invoice",$permission))
+          { 
+             ?>
                         <th >  Action</th>
+          <?php } ?>
                      </tr>
                   </thead>
                   <tbody class="dataadd">
@@ -184,8 +200,13 @@
       <h3 class="box-title"> Credit Note </h3>
          <div class="box">
            <div class="box-header with-border">
+           <?php 
+          
+          if (in_array("create creditnote",$permission))
+          { 
+             ?>
            <input type="submit" onclick="createcreditnote();" style="float: right; width:150px;" class="btn btn-block btn-success" value="Create Creditnote">
-
+          <?php } ?>
            <!-- <span class="new-button" style="float: right;"><a href="<?php echo base_url(); ?> " class="btn btn-success btn-sm" ><span class="fa fa-plus"></span> &nbsp;Create Creditnote </a></span> -->
            </div>
            
@@ -258,9 +279,14 @@
       <h3 class="box-title"> Posted Expences </h3>
          <div class="box ">
            <div class="box-header with-border">
+           <?php 
           
+          if (in_array("create expense",$permission))
+          { 
+             ?> 
            <input type="submit" onclick="createexpense();" style="float: right; width:150px;" class="btn btn-block btn-success" value="Create new expense">
-           </div>
+          <?php } ?>  
+         </div>
            
             <div class="box-body">
     
@@ -275,9 +301,14 @@
                         <th> Supplier</th>
                       
                         <th style='text-align: right;'>  Amount#</th>
-                        <th>  Action</th>
+                        <?php 
+          
+          if (in_array("update expense",$permission))
+          { 
+             ?>
+                 <th>  Action</th>
 
-
+          <?php } ?>
                      </tr>
                   </thead>
                   <tbody class="postedexpense">
@@ -296,8 +327,14 @@
          <div class="box ">
            <div class="box-header with-border">
            <h3 class="box-title"> Debit Note </h3>
+           <?php 
+          
+          if (in_array("create debitnote",$permission))
+          { 
+             ?> 
            <input type="submit" onclick="createdebitnote();" style="float: right; width:150px;" class="btn btn-block btn-success" value="Create Debitnote">
-           </div>
+          <?php } ?> 
+         </div>
            
             <div class="box-body">
     

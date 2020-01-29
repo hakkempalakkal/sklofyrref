@@ -36,7 +36,7 @@ class Supplier extends CI_Controller {
 			$result['permission']=$this->Login_model->select_all_menu($user_id);	
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
-		$this->load->view('masters/supplier',$data);
+		$this->load->view('masters/supplier',$data,$result);
 		 $this->load->view('includes/footer');
 	}
 	public function create()

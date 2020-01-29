@@ -1,8 +1,20 @@
-
+<?php 
+// var_dump($permission);
+// die();
+?>
   <section class="content-header">
             <h1>
             Supplier Master
+        
+          <?php 
+          
+          if (in_array("create supplier",$permission))
+          { 
+             ?>
               <span class="new-button"><a href="<?php echo base_url(); ?>supplier-create" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> &nbsp;Add New</a></span>
+              <?php
+        }
+        ?>
             </h1>
           
           </section>
@@ -21,7 +33,16 @@
                     <th>MOBILE</th>
                     <th>EMAIL</th>
                     <th>Status</th>
+                    <?php 
+          
+          if (in_array("update supplier",$permission))
+          { 
+             ?>
+                
                     <th>ACTION</th>
+                    <?php
+                    }
+                    ?>
                   </tr>
                   <thead>
                   <tbody>
@@ -43,7 +64,11 @@ foreach ($value as $key => $value1)
                       else
                       { ?> <td><span class="label label-danger"><?php echo "Disabled";?></td></span><?php } ?>
                
-
+               <?php 
+          
+          if (in_array("update supplier",$permission))
+          { 
+             ?>
                     <td><ul class="nav"><li class="dropdown">
                 <a class="btn btn-sm dropdown-toggle" style="width: 50px;" data-toggle="dropdown" href="#">
                   <i class="fa fa-ellipsis-v"></i> 
@@ -68,6 +93,8 @@ foreach ($value as $key => $value1)
                   <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deactivate</a></li> -->
                 </ul>
               </li>  </ul></td>
+              <?php }
+              ?>
                   </tr>
                 
 <?php 

@@ -13,7 +13,12 @@
                <table id="mytable" class="table table-stripped">
                   <thead>
                      <tr>
-                        <th>#</th>
+                     <?php 
+          
+          if (in_array("create nonbilledreports",$permission))
+          { 
+             ?>     <th>#</th>
+          <?php } ?>
                         <th> Code</th>
                         <th> Date</th>
                         <th> Shipper</th>
@@ -34,8 +39,15 @@
                      <input type="hidden" id="jobid" value="<?php  echo $value1->JobId; ?>" ></input>
                    
                      <!-- <?php echo base_url(); ?>job-invoice/id=<?php echo $value1->JobId;?>  -->
+                     <?php 
+          
+          if (in_array("create nonbilledreports",$permission))
+          { 
+             ?>   
                      <td class="text-center"> <span class="new-button"><button  onclick="createinvoice();" class="btn btn-success btn-xs"><span class="fa fa-plus"></span> &nbsp;Create Invoice </button></span>
-                        <td class="text-center"><?php echo $value1->Number;?></td>
+                     <?php } ?>
+
+                     <td class="text-center"><?php echo $value1->Number;?></td>
                         <td class="text-center"><?php echo $value1->Date;?></td>
                         <td class="text-center"><?php echo $value1->Shipper;?></td>
                         <td class="text-center"><?php echo $value1->Consignee;?></td>

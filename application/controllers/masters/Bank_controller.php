@@ -31,7 +31,7 @@ class Bank_controller extends CI_Controller {
 	
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
-		$this->load->view('masters/bank',$data);
+		$this->load->view('masters/bank',$data,$result);
 		$this->load->view('includes/footer');
 
     }

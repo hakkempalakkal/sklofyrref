@@ -224,6 +224,7 @@ $route['transportation-update'] = 'transaction/Transaction/update';
 $route['transportation-description/(:any)'] = 'transaction/Transaction/getdescription/$1';
 $route['transportation-jobdetails/(:any)'] = 'transaction/Transaction/jobdetails/$1';
 $route['transportation-estimate'] = 'transaction/Transaction/store_estimate';
+<<<<<<< HEAD
 $route['transportation-carrier/(:any)'] = 'transaction/Transaction/getcarrier/$1';
 $route['list-job'] = 'transaction/Transaction/job_transactionlist';
 
@@ -232,6 +233,8 @@ $route['update-estimate'] = 'transaction/Transaction/update_estimate';
 
 
 
+=======
+>>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
 //invoice
 //job-invoice
 $route['job-invoice/(:any)'] = 'transaction/Job_invoice_controller/job_invoice/$1';
@@ -293,8 +296,19 @@ $route['job-reports'] = 'reports/Reports/job_reports';
 $route['non-billed-jobs'] = 'reports/Reports/non_billed_jobs';
 $route['invoice-reports'] = 'reports/Reports/invoice_reports';
 $route['pending-invoice'] = 'reports/Reports/pending_invoice';
+$route['invoice-report-data'] = 'reports/Reports/invoice_report_data';
+$route['pending-invoice'] = 'reports/Reports/pending_invoice_reports';
+$route['pending-invoice-report-data'] = 'reports/Reports/pending_invoice_report_data';
+
+// $route['pending-invoice'] = 'reports/Reports/pending_invoice';
+$route['nonbilled-report-data'] = 'reports/Reports/nonbilled_report_report_data';
+
 $route['bill-report'] = 'reports/Reports/bill_reports';
+$route['bill-report-data'] = 'reports/Reports/bill_reports_getdata';
+
 $route['pending-bills'] = 'reports/Reports/pending_bills';
+$route['pending-bill-data'] = 'reports/Reports/pending_bill_data';
+
 //job search
 $route['job-search'] = 'jobsearch/Job_Search/job_search';
 

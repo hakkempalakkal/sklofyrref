@@ -45,7 +45,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <script src="<?php echo base_url(); ?>/assets/user_scripts/usermanagement/user_script.js"></script>
-   
+    <script src="<?php echo base_url(); ?>/assets/js/radio_button.js"></script>
+
 <style>
 .img-responsive{
 border: 1px solid #ddd;

@@ -1,10 +1,10 @@
 </div><!-- /.content-wrapper -->
 
-      <footer class="main-footer" id="foot">
+      <footer class="main-footer">
         <div class="pull-right hidden-xs">
           <b></b> 
         </div>
-        <strong>Copyright &copy; 2019-2020 <a href="#"> Ferry folks</a> by  <a href="http://www.palmtrix.com/"> Palmtrix</a>.</strong>
+        <strong>Copyright &copy; 2019-2020 <a href="http://localhost/Logistics/LogisticsV1"> Ferry folks</a> by  <a href="http://www.palmtrix.com/"> Palmtrix</a>.</strong>
       </footer>
     </div><!-- ./wrapper -->
 

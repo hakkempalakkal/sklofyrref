@@ -3,8 +3,7 @@
     function store()
     {
       var now = moment().format('YYYY-MM-DD h:mm:ss a');
-  var type=$('#carrier_type').val();
-  // alert(type);
+  
       postData = {
       
             "carrier_type": $('#carrier_type').val(),

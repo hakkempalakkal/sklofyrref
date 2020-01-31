@@ -4,12 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1"><title>
-	Ferry Folks
+	AOT
 </title>
 <link href="<?php echo base_url(); ?>/assets/expensereport/style.css" rel="stylesheet" />
-<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
-<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/expensereport/bootstrap.css" />
@@ -66,25 +63,25 @@
 <body>
   <br><br>
   <form role="form" method="post" action=""> 
-  <div class="col-md-8 form-group" id="searchform">
+  <div class="col-md-8 form-group">
     
       <label  >Client</label>
       <input type="text" id="client_name" value="">
       <input type="hidden" id="client_id" value="">
 			<label  for="date">From</label>
-			<input  id="fromdate" name="date"  id="fromdate" placeholder="yyyy-mm-dd" type="text"/>
+			<input  id="fromdate" name="date" id="fromdate" placeholder="yyyy-mm-dd" type="text"/>
    
 			<label  for="date">To</label>
-			<input  id="todate" name="date"  id="todate" placeholder="yyyy-mm-dd" type="text"/>
+			<input  id="todate" name="date" id="todate" placeholder="yyyy-mm-dd" type="text"/>
      
       <input type="button" value="Search" onclick="get_client_data();" id="clientsearch"></input>
   
     </div>  </form>
             <div class="container">
-                <div class="row" id="printdiv"> 
+                <div class="row">
                     <a id="btnHome" style="float: left;" href="<?php echo base_url(); ?>Home" class="btn btn-default">Home</a>
                     <!-- <a id="btnBack" style="float: left;" href="<?php echo base_url(); ?>debit-note" class="btn btn-default">Make Another Invoice</a> -->
-                    <button id="btnPrint" style="float: left;" class="btn btn-success" onclick="PrintPage()"><i class="fa fa-print"></i>Print</button>
+                    <button id="btnPrint" style="float: left;" class="btn btn-success" onclick="PrintPage();"><i class="fa fa-print"></i>Print</button>
 
                     <!-- <div style="position: absolute; left: 41%;">
                         <a id="lbtnPrev" href="javascript:__doPostBack(&#39;lbtnPrev&#39;,&#39;&#39;)"><i class="fa fa-arrow-circle-o-left" style="font-size: 27px;" aria-hidden="true"></i></a>&nbsp;&nbsp;
@@ -100,8 +97,8 @@
                     </table>
                     </div>
                     <br><br><br><br> <br><br><br><br>
-                    <div id="clientname_view" class="textcenters" style="display: flex; align-items: center; justify-content: center; border-top: solid #7d7676 1px; border-bottom: solid #7d7676 1px; margin-bottom: 15px; margin-top: 15px;">
-                        <h3></h3> <br />
+                    <div class="textcenters" style="display: flex; align-items: center; justify-content: center; border-top: solid #7d7676 1px; border-bottom: solid #7d7676 1px; margin-bottom: 15px; margin-top: 15px;">
+                        <h3>client name and date <br />
                     
                     </div>
                     
@@ -134,11 +131,14 @@
                         <br>
                        
 
-                       
+                        <div class="f-fix">
+                         
+                        </div>
 
                     </div>
-               
-            
+                </div>
+            </div>
+       
 
     </div>
 
@@ -182,28 +182,21 @@
 
             //Get the print button and put it into a variable
             var printButton = document.getElementById("btnPrint");
-            var backButton = document.getElementById("searchform");
-            var nextButton = document.getElementById("printdiv");
-            //  var footer = document.getElementsById("foot");
-            // var HomeButton = document.getElementById("btnHome");
+            var backButton = document.getElementById("btnBack");
+            var nextButton = document.getElementById("lbtnNext");
+            var prevButton = document.getElementById("lbtnPrev");
+            var HomeButton = document.getElementById("btnHome");
 
             //Set the print button visibility to 'hidden' 
             printButton.style.visibility = 'hidden';
             backButton.style.visibility = 'hidden';
             nextButton.style.visibility = 'hidden';
-            // footer.style.visibility = 'hidden';
-            // HomeButton.style.visibility = 'hidden';
-
-
+            prevButton.style.visibility = 'hidden';
+            HomeButton.style.visibility = 'hidden';
             window.print()
 
         }
     </script>
-    <!-- <script>
-$("#btnPrint").click(function () {
-   $("#foot").html("hidden");
-})
-</script> -->
      <!-- <script src="<?php echo base_url(); ?>/assets/user_scripts/searchclient/client_search.js"></script> -->
     <script>
           $(document).ready(function(){
@@ -224,9 +217,8 @@ $("#btnPrint").click(function () {
                               select: function (event, ui) {
                                   $("#client_name").val(ui.item.label);
                                  $("#client_id").val(ui.item.value);
-                                 $("#clientname_view").html(ui.item.label);
                                   return false;
-                                //   alert("hai");
+                                  alert("hai");
                               }
                           });
                }
@@ -235,19 +227,24 @@ $("#btnPrint").click(function () {
   });
   </script>
   <!-- <script src="<?php echo base_url(); ?>/assets/plugins/jQuery/jQuery-2.1.3.min.js"></script> -->
-
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <script>
-  $(document).ready(function(){
+    $(document).ready(function(){
       var date_input=$('input[name="date"]'); //our date input has the name "date"
       var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
       var options={
-        format: 'yyyy/mm/dd',
+        format: 'yyyy-mm-dd',
         container: container,
         todayHighlight: true,
         autoclose: true,
       };
       date_input.datepicker(options);
-  })
+     
+     
+
+    })
+    
     </script>
     <script src="<?php echo base_url(); ?>/assets/user_scripts/clientsearch/clientsearch.js"></script>
 </body>

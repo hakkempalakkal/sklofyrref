@@ -1,4 +1,8 @@
+<?php 
+  // var_dump($permission);
 
+  // die();
+  ?>
 <section class="content-header">
             <h1>
           Supplier List
@@ -23,8 +27,14 @@
                   <table id="datatable-buttons" style="width: 100%;" class="table table-striped table-bordered dataTable no-footer dtr-inline collapsed" role="grid" aria-describedby="datatable-buttons_info">
                       <thead>
                         <tr role="row">
-                          <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 119px;" aria-sort="ascending" aria-label="#: activate to sort column descending">#</th>
-                          <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 18px;" aria-label="No: activate to sort column ascending">Code</th>
+                        <?php 
+          
+          if (in_array("create supplier payment",$permission))
+          { 
+             ?>
+                        <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 119px;" aria-sort="ascending" aria-label="#: activate to sort column descending">#</th>
+                        <?php } ?>
+                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 18px;" aria-label="No: activate to sort column ascending">Code</th>
                           <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 44px;" aria-label="Date: activate to sort column ascending">Name</th>
                           <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 120px;" aria-label="Shipper: activate to sort column ascending">Address</th>
                           <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 114px;" aria-label="Consignee: activate to sort column ascending">Vat No</th>
@@ -39,9 +49,14 @@
                         {
                           ?>
                       <tr role="row" class="odd">
+                      <?php 
+          
+          if (in_array("create supplier payment",$permission))
+          { 
+             ?>
                       <td tabindex="0" class="sorting_1">
                       <input type="submit" onclick="createsupplierpayment('<?php echo $value->id; ?>');"  class="btn btn-sms btn-success" value="Create supplier payment"></td>
-
+          <?php } ?>
                             <!-- <td tabindex="0" class="sorting_1"><a href="" class="btn btn-success">create Invoice</a></td> -->
                           <td><?php echo $value->code;?><input type="hidden" id="sid" value="<?php  echo $value->id;?>"></td>
                           <td><?php echo $value->supplier_name;?></td>

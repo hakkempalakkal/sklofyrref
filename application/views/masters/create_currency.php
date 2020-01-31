@@ -11,7 +11,7 @@
                   <div class="box-body" style="min-height: 300px;">
                     <div class="form-group col-md-6 ">
                       <label for="name">Currency</label>
-                      <input type="text" class="form-control" required id="currency" value="" placeholder="Enter Currency">
+                      <input type="text" class="form-control" required id="currency" value="">
                     </div>
                   
                   </div><!-- /.box-body -->

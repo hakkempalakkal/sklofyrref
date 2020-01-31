@@ -20,15 +20,13 @@
                   <div class="form-group col-md-6 ">
                       <label>Carrier Type</label>
                       <select class="form-control" name="carrier_type" id="carrier_type" value="">
-                      <option value="Air">Air</option>
-                      <option value="Sea">Sea</option>
-                      <option value="Other">Other</option>
-                        <option value="Land">Land</option>
+                        <option value="land">Land</option>
+                        <option value="transportation">Transportation</option>
                       </select>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="exampleInputname1">Code</label>
-                <input type="text" id="code"  name="code" class="form-control"  placeholder="Prifix code"  value="" >
+                <input type="text" id="code"  name="code" class="form-control" readonly="readonly" placeholder="<?php echo $code[0]->code+1;?>"  value="<?php echo $code[0]->code+1;?>" >
                     </div>
                                 <div class="form-group col-md-6">
                       <label for="exampleInputname1">Name</label>
@@ -36,60 +34,66 @@
                     </div>
                                
                   
-                                <!-- <div class="form-group col-md-6">
+                                <div class="form-group col-md-6">
 									<label>Contact Person</label>
 									
-									<input type="text" class="form-control" id="contact" name="contact" placeholder="Enter Contact Person">
+									<input type="text" class="form-control" id="contact" name="contact">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Address</label>
 									
-									<input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+									<input type="text" class="form-control" id="address" name="address">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Country</label>
 									
-									<input type="text" class="form-control" id="country" name="country" placeholder="Enter Country">
+									<input type="text" class="form-control" id="country" name="country">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Telephone</label>
 									
-									<input type="text" class="form-control" id="telephone" name="telephone" placeholder="Enter Telephone">
+									<input type="text" class="form-control" id="telephone" name="telephone">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Mobile</label>
 									
-									<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter Mobile">
+									<input type="text" class="form-control" id="mobile" name="mobile">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Fax</label>
 									
-									<input type="text" class="form-control" id="fax" name="fax" placeholder="Enter Fax">
+									<input type="text" class="form-control" id="fax" name="fax">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Email</label>
 									
-									<input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+									<input type="text" class="form-control" id="email" name="email">
 								
                                 </div>
                                 <div class="form-group col-md-6">
 									<label>Remarks</label>
 									
-									<input type="text" class="form-control" id="remarks" name="remarks" placeholder="Enter Remarks">
+									<input type="text" class="form-control" id="remarks" name="remarks">
+								
+                                </div>
+                                <!-- <div class="form-group col-md-6">
+									<label>credit limit</label>
+									
+										<input type="text" class="form-control" id="credit" name="credit">
 								
                                 </div> -->
-                              
+                                
                                
                                
 </div>
                   <div class="box-footer">
-                    <input type="submit"  onclick="store();" class="btn btn-success"></input>
+                    <button type="button"  onclick="store();" class="btn btn-success">Save</button>
                     <button type="reset"  class="btn btn-success">Cancel</button>
                   </div>
                 </form>

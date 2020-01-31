@@ -71,8 +71,12 @@
                                   <?php
                                   }
                                    ?>
+<<<<<<< HEAD
                                  </select>
+=======
+>>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
                                  </select>
+                             
                               </div>
                               <div class="form-group col-md-1">
                                  <label class="control-label">Conv.Factor</label>

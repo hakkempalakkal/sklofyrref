@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Job_invoice_model extends CI_Model {
+class job_invoice_model extends CI_Model {
 
 public function select_job_details($id)
 {

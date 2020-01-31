@@ -100,19 +100,6 @@ $result = $query->result();
 return $result;
 
 }
-//autocomplete carrier
-
-// public function getcarrier($data)
-// {
-//   $this->db->where('name', $data);   
-// $this->db->select('*');
-// $this->db->from('mst_carrier');
-// $query = $this->db->get();
-// $result = $query->result();
-// return $result;
-
-// }
-
 public function update($id,$data)
 {
 

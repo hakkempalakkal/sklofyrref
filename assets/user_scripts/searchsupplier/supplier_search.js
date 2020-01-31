@@ -40,7 +40,8 @@ function get_supplier_data()
 //supplier paid invoice total
 $("#supplierinvpaid").text(result["supplierpaidinvoice"][0].sum);
 //due
-
+// $("#supplierinvtotal").text(result["supplierinvoicetotal"][0].sum);
+// $("#supplierinvpaid").text(result["supplierpaidinvoice"][0].sum);
 var unpaid=result["supplierinvoicetotal"][0].sum;
 var paid=result["supplierpaidinvoice"][0].sum;
  var due=(parseFloat(unpaid)-parseFloat(paid)).toFixed(2);

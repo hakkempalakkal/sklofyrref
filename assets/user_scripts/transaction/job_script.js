@@ -28,14 +28,6 @@
       }
   
     }
-    //  function nextbutton()
-    // {
-    //   $(document).ready(function()
-    //   {
-    //     $( "#tabs" ).tabs( "select" , 3 ) ;
-    //   });
-    // }
-    //$('#txtPropHPhone').val() + '<br/>' + $(txtPropWPhone').val();
   //  update
     function update()
     {
@@ -52,7 +44,7 @@
         var Destination=$("#destination_air").val();
         var carrier=$("#Carrier_air").val();
         var PoNo=$("#PoNo_air").val();
-        var Mawb=$("#Mawb_air").val()+'-'+$("#Mawb_code").val();
+        var Mawb=$("#Mawb_air").val();
         var Nopcs=$("#Nopcs_air").val();
         var ActualWeight=$("#ActualWeight_air").val();
         var ChargeableWeight=$("#ChargeableWeight_air").val();
@@ -185,9 +177,12 @@ console.log(result[0].description);
   });
 
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
 //view job details
 function jobdetails()
 {
@@ -279,6 +274,7 @@ var estimate_master_details =[];
    
       }
     });
+<<<<<<< HEAD
 }
 
 //onchange carrier and mawb
@@ -301,4 +297,6 @@ function Changepanel()
   $('.vzbtn1').removeClass("btn-success");
   $('.vzbtn2').removeClass("btn-success");
   $('.vzbtn3').removeClass("btn-success");
+=======
+>>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
 }

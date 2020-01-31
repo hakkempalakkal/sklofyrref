@@ -43,7 +43,7 @@ class Client_Search extends CI_Controller {
 	$value=$data["id"];
 	$from=$data["from"];
 	$to=$data["to"];
-//
+
 	$result['clientserchdata']= $this->Client_searchmodel->getclient_view($value,$from,$to);
 	echo json_encode($result);
  }

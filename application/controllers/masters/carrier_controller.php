@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Carrier_controller extends CI_Controller {
+class carrier_controller extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -14,12 +14,12 @@ class Carrier_controller extends CI_Controller {
          $this->load->database(); 
 		 $this->load->library('session');
 		 $this->load->helper('url');
-		 $this->load->model('masters/Carrier_model');
+		 $this->load->model('masters/carrier_model');
 	}
 	
 	public function index()
 	{	
-        $data['carrier']=$this->Carrier_model->list();
+        $data['carrier']=$this->carrier_model->list();
       	$user_id=	$this->session->userdata('user_id');
 		$res = $this->Permission_model->userdetails($user_id);
 		$user_image['values']=$res[0]->user_image;
@@ -30,7 +30,7 @@ class Carrier_controller extends CI_Controller {
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
-		$this->load->view('masters/carrier',$data);
+		$this->load->view('masters/carrier',$data,$result);
 		$this->load->view('includes/footer');
     }
     public function add()
@@ -42,7 +42,7 @@ class Carrier_controller extends CI_Controller {
 		
 		$user_id=	$this->session->userdata('user_id');
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
-		$data['code']=$this->Carrier_model->selectcode();
+		$data['code']=$this->carrier_model->selectcode();
 	
 		// var_dump($data);
 		// die();
@@ -56,7 +56,7 @@ class Carrier_controller extends CI_Controller {
     public function store()
 	{
 		$postdata=$this->input->post('postData');
-		$result= $this->Carrier_model->add($postdata);
+		$result= $this->carrier_model->add($postdata);
 		echo 'success';
 		
     }
@@ -67,7 +67,7 @@ class Carrier_controller extends CI_Controller {
 		$user_image['values']=$res[0]->user_image;
 		$result['roles']=$this->Login_model->userdetails($user_id);
 		$id=$_REQUEST['id'];
-		$data['value'] = $this->Carrier_model->edit($id);
+		$data['value'] = $this->carrier_model->edit($id);
 		$user_id=	$this->session->userdata('user_id');
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
 	
@@ -83,7 +83,7 @@ class Carrier_controller extends CI_Controller {
 		
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
-		$result= $this->Carrier_model->update($id,$data);
+		$result= $this->carrier_model->update($id,$data);
 		echo 'success';
 	
 	}
@@ -91,14 +91,14 @@ class Carrier_controller extends CI_Controller {
 	public function enable_status($id)
 	
 	{
-		$result = $this->Carrier_model->enable_status($id);
+		$result = $this->carrier_model->enable_status($id);
 
 		redirect('carrier');
 	}
 	public function disable_status($id)
 	
 	{
-		$result = $this->Carrier_model->disable_status($id);
+		$result = $this->carrier_model->disable_status($id);
 		redirect('carrier');
 		
 	}

@@ -39,9 +39,7 @@ class Transaction extends CI_Controller {
 		$user_image['values']=$res[0]->user_image;
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
 				// $this->index($result);
-				
 		 $data['values'] = $this->Transaction_model->list();
-	
 	
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
@@ -102,15 +100,7 @@ class Transaction extends CI_Controller {
         
         $data = $this->Transaction_model->getshippers();
         echo json_encode($data);
-	  }
-	  //carrier
-	//   public function getcarrier($value)
-	//   {
-	// 		$result= $this->Transaction_model->getcarrier($value);
-			
-	// 		echo json_encode($result);
-
-	//   }
+      }
 	  public function getconsigneedata(){
         
         $data = $this->Transaction_model->getshippers();

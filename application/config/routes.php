@@ -283,9 +283,19 @@ $route['update-creditnote'] = 'transaction/Creditnote_Controller/update_creditno
 $route['job-reports'] = 'reports/Reports/job_reports';
 $route['non-billed-jobs'] = 'reports/Reports/non_billed_jobs';
 $route['invoice-reports'] = 'reports/Reports/invoice_reports';
-$route['pending-invoice'] = 'reports/Reports/pending_invoice';
+$route['invoice-report-data'] = 'reports/Reports/invoice_report_data';
+$route['pending-invoice'] = 'reports/Reports/pending_invoice_reports';
+$route['pending-invoice-report-data'] = 'reports/Reports/pending_invoice_report_data';
+
+// $route['pending-invoice'] = 'reports/Reports/pending_invoice';
+$route['nonbilled-report-data'] = 'reports/Reports/nonbilled_report_report_data';
+
 $route['bill-report'] = 'reports/Reports/bill_reports';
+$route['bill-report-data'] = 'reports/Reports/bill_reports_getdata';
+
 $route['pending-bills'] = 'reports/Reports/pending_bills';
+$route['pending-bill-data'] = 'reports/Reports/pending_bill_data';
+
 //job search
 $route['job-search'] = 'jobsearch/Job_Search/job_search';
 

@@ -72,7 +72,7 @@
                                   }
                                    ?>
                                  </select>
-                                 </select>
+                             
                               </div>
                               <div class="form-group col-md-1">
                                  <label class="control-label">Conv.Factor</label>

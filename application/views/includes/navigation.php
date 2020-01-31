@@ -72,7 +72,7 @@
             </li>
             <?php 
           
-          if (in_array("read bank"||"read carrier"||"read client"||"read supplier"||"read descriptionmaster"||"read shipper"||"read currency",$permission))
+          if(in_array("read bank",$permission)||in_array("read carrier",$permission)||in_array("read client",$permission)||in_array("read supplier",$permission)||in_array("read descriptionmaster",$permission)||in_array("read shipper",$permission)||in_array("read currency",$permission))
           { 
              ?>
             <li class="treeview">
@@ -246,7 +246,7 @@
      
          <?php 
           
-          if (in_array("read jobreports"||"read nonbilledreports"||"read invoicereports"||"read pendinginvoice"||"read billreport"||"read pendingbills",$permission))
+          if (in_array("read jobreports",$permission)||in_array("read nonbilledreports",$permission)||in_array("read invoicereports",$permission)||in_array("read pendinginvoice",$permission)||in_array("read billreport",$permission)||in_array("read pendingbills",$permission))
           { 
              ?>
             <li class="treeview">
@@ -303,7 +303,7 @@
         ?>
           <?php 
           
-          if (in_array("create ledgergroup"||"create ledger"||"create accountsentry"||"read daybook"||"read trialbalance"||"read balancesheet"||"read ledgerview",$permission))
+          if (in_array("create ledgergroup",$permission)||in_array("create ledger",$permission)||in_array("create accountsentry",$permission)||in_array("read daybook",$permission)||in_array("read trialbalance",$permission)||in_array("read balancesheet",$permission)||in_array("read ledgerview",$permission))
           { 
              ?>
             <li class="treeview ">
@@ -311,9 +311,7 @@
                 <i class=" fa fa-credit-card"></i> <span>Accounts </span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-              <?php
-        }
-        ?>
+           
           <?php 
           
           if (in_array("create ledgergroup",$permission))
@@ -381,9 +379,10 @@
                 </ul>
             </li>
           
-         <?php 
+      <?php } ?>
+      <?php 
           
-          // if (in_array("create ledgergroup"||"create ledger"||"create accountsentry"||"read daybook"||"read trialbalance"||"read balancesheet"||"read ledgerview",$permission))
+          // if (in_array("read ledgerview",$permission))
           // { 
              ?>
             <li class="treeview">

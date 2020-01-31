@@ -49,24 +49,38 @@
                     foreach($selected as $value)
                     {
                       if($val->id==$value->role_id){ ?>
-                      <div class="checkbox form-group col-md-3 " >
+                     <div class="col-md-3 " >
+                        <label class="customradio">
+                          <span class="radiotextsty"><?php echo $val->name;?></span>
+                           <input type="radio" checked required name="roles[]" id="roles" value="<?php echo $val->id;?>"/>
+                           <span class="checkmark"></span>
+                          </label>
+                        </div>  
+                    <!-- <div class="checkbox form-group col-md-3 " >
                         
                         <label>
                           <input type="radio" checked  name="roles[]"  id="roles" value="<?php echo $val->id;?>"/>
-                          <!-- <input type="hidden" name="id" id="id" value="<?php echo $val->id;?>" /> -->
                           <?php echo $val->name;?>
                        
                         </label>
-                      </div>
-                       <?php } else { ?> <div class="checkbox form-group col-md-3 " >
+                      </div> -->
+                       <?php } else { ?>
+                        <div class="col-md-3 " >
+                        <label class="customradio">
+                          <span class="radiotextsty"><?php echo $val->name;?></span>
+                           <input type="radio"  required name="roles[]" id="roles" value="<?php echo $val->id;?>"/>
+                           <span class="checkmark"></span>
+                          </label>
+                        </div>  
+                        <!-- <div class="checkbox form-group col-md-3 " >
                         
                         <label>
                           <input type="radio"  name="roles[]"  id="roles" value="<?php echo $val->id;?>"/>
-                          <!-- <input type="hidden" name="id" id="id" value="<?php echo $val->id;?>" /> -->
+       
                           <?php echo $val->name;?>
                        
                         </label>
-                      </div>
+                      </div> -->
                        <?php } ?>
                    
                       <?php } } ?>

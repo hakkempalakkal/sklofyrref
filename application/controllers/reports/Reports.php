@@ -21,11 +21,11 @@ class Reports extends CI_Controller {
 	
 	public function job_reports()
 	{	
-        // $data['bank']=$this->Bank_model->list();
+      
       	$user_id=	$this->session->userdata('user_id');
 		$res = $this->Permission_model->userdetails($user_id);
 		$user_image['values']=$res[0]->user_image;
-		// $data['value'] = $this->User_model->list();
+	
 		$result['roles']=$this->Login_model->userdetails($user_id);
 		//to add menus
 		$data['values'] = $this->Report_model->listjobdata();
@@ -57,76 +57,149 @@ class Reports extends CI_Controller {
     }
     public function invoice_reports()
 	{	
-        // $data['bank']=$this->Bank_model->list();
       	$user_id=	$this->session->userdata('user_id');
 		$res = $this->Permission_model->userdetails($user_id);
 		$user_image['values']=$res[0]->user_image;
-		// $data['value'] = $this->User_model->list();
 		$result['roles']=$this->Login_model->userdetails($user_id);
 		//to add menus
 	
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
-	
+	 $result['client']= $this->Report_model->select_clients();
+
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
-		$this->load->view('reports/invoice_report');
+		$this->load->view('reports/invoice_report',$result);
 		$this->load->view('includes/footer');
 
-    }
+	}
+	public function invoice_report_data()
+	{
+		$data=$this->input->post('postData');
+		$id=$data["id"];
+	$from=$data["fromdate"];
+	$to=$data["todate"];
+	if($id=="")
+	{
+
+ $result['invoicereportdata']= $this->Report_model->get_invoice_reportdata($from,$to);
+		}
+		else{
+			$result['invoicereportdata']= $this->Report_model->get_invoice_reportdata_withid($id,$from,$to);
+
+		}	
+		echo json_encode($result);	
+	}
+
+	public function pending_invoice_reports()
+	{	
+      	$user_id=	$this->session->userdata('user_id');
+		$res = $this->Permission_model->userdetails($user_id);
+		$user_image['values']=$res[0]->user_image;
+		$result['roles']=$this->Login_model->userdetails($user_id);
+		//to add menus
+	
+		$result['permission']=$this->Login_model->select_all_menu($user_id);
+	 $result['client']= $this->Report_model->select_clients();
+
+		$this->load->view('includes/header',$user_image);
+		$this->load->view('includes/navigation',$result,$user_image);
+		$this->load->view('reports/pending_invoice',$result);
+		$this->load->view('includes/footer');
+
+	}
+	public function pending_invoice_report_data()
+	{
+		$data=$this->input->post('postData');
+		$id=$data["id"];
+	$from=$data["fromdate"];
+	$to=$data["todate"];
+	if($id=="")
+	{
+
+ $result['pendinginvoicereportdata']= $this->Report_model->pending_invoice_data($from,$to);
+		}
+		else{
+			$result['pendinginvoicereportdata']= $this->Report_model->pending_invoice_data_withid($id,$from,$to);
+
+		}	
+		echo json_encode($result);	
+	}
+
+
     public function bill_reports()
 	{	
-        // $data['bank']=$this->Bank_model->list();
       	$user_id=	$this->session->userdata('user_id');
 		$res = $this->Permission_model->userdetails($user_id);
 		$user_image['values']=$res[0]->user_image;
-		// $data['value'] = $this->User_model->list();
 		$result['roles']=$this->Login_model->userdetails($user_id);
 		//to add menus
 	
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
-	
+		
+		$result['suppliers']= $this->Report_model->select_suppliers();
+
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
-		$this->load->view('reports/bill_reports');
+		$this->load->view('reports/bill_reports',$result);
 		$this->load->view('includes/footer');
 
     }
-    // public function pending_bills()
-	// {	
-    //     // $data['bank']=$this->Bank_model->list();
-    //   	$user_id=	$this->session->userdata('user_id');
-	// 	$res = $this->Permission_model->userdetails($user_id);
-	// 	$user_image['values']=$res[0]->user_image;
-	// 	// $data['value'] = $this->User_model->list();
-	// 	$result['roles']=$this->Login_model->userdetails($user_id);
-	// 	//to add menus
-	
-	// 	$result['permission']=$this->Login_model->select_all_menu($user_id);
-	
-	// 	$this->load->view('includes/header',$user_image);
-	// 	$this->load->view('includes/navigation',$result,$user_image);
-	// 	$this->load->view('reports/pending_bills');
-	// 	$this->load->view('includes/footer');
+	public function bill_reports_getdata()
+	{
+		$data=$this->input->post('postData');
+	$id=$data["id"];
+	$from=$data["from"];
+	$to=$data["to"];
 
-    // }
-    public function pending_invoice()
+if($id=="")
+{
+	$result['billreportdata']= $this->Report_model->get_billed_reportdata($from,$to);
+
+}
+else
+{
+	$result['billreportdata']= $this->Report_model->get_billed_reportdata_withid($id,$from,$to);
+
+}
+	echo json_encode($result);	
+	}
+
+    public function pending_bills()
 	{	
-        // $data['bank']=$this->Bank_model->list();
       	$user_id=	$this->session->userdata('user_id');
 		$res = $this->Permission_model->userdetails($user_id);
 		$user_image['values']=$res[0]->user_image;
-		// $data['value'] = $this->User_model->list();
 		$result['roles']=$this->Login_model->userdetails($user_id);
 		//to add menus
 	
 		$result['permission']=$this->Login_model->select_all_menu($user_id);
-	
+		
+		$result['suppliers']= $this->Report_model->select_suppliers();
+
 		$this->load->view('includes/header',$user_image);
 		$this->load->view('includes/navigation',$result,$user_image);
-		$this->load->view('reports/pending_invoice');
+		$this->load->view('reports/pending_bills',$result);
 		$this->load->view('includes/footer');
 
     }
 
+	public function 	pending_bill_data()
+	{
+		$data=$this->input->post('postData');
+	$id=$data["id"];
+	$from=$data["from"];
+	$to=$data["to"];
 
+if($id=="")
+{
+	$result['pendingbillreportdata']= $this->Report_model->get_pendiding_bille_reportdata($from,$to);
+
+}
+else
+{
+	$result['pendingbillreportdata']= $this->Report_model->get_pending_bille_reportdata_withid($id,$from,$to);
+
+}
+	echo json_encode($result);	
+	}
 }

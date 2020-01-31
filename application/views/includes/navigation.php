@@ -203,7 +203,7 @@
              ?>
             <li class="treeview ">
               <a href="<?php echo base_url(); ?>client-search">
-                <i class="fa fa-search"></i> <span>Client View </span> <i class=""></i>
+                <i class="fa  fa-user"></i> <span>Client View </span> <i class=""></i>
               </a>
              
             </li>
@@ -229,7 +229,7 @@
              ?>
               <li class="treeview">
               <a href="<?php echo base_url(); ?>clientpaymentlist">
-                <i class="fa fa-search"></i> <span> client reciept</span> <i class=" pull-right"></i>
+                <i class="fa fa-list"></i> <span> client reciept</span> <i class=" pull-right"></i>
               </a>
              
             </li>

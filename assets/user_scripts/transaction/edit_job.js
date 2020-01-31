@@ -1,5 +1,5 @@
 
-    //add type
+ var deletedidarray=[];
     function add($type)
     {
 
@@ -148,7 +148,7 @@
     };
     console.log(postData);
       var request = $.ajax({
-      url: 'transportation-update',
+      url: '../transportation-update',
       type: 'POST',
       data: {postData:postData} ,
       dataType: 'JSON'
@@ -168,12 +168,12 @@
 
    }
 //get description
- function getdata()
+ function getdatadesc()
 {
  
 postData=$('#desc_code').val();
 var request = $.ajax({
-  url: 'transportation-description/'+postData,
+  url: '../transportation-description/'+postData,
   type: 'GET',
   dataType: 'JSON'
   });
@@ -189,32 +189,32 @@ console.log(result[0].description);
 
 
 //view job details
-function jobdetails()
-{
+// function jobdetails()
+// {
  
-postData=$('#id').val();
-var request = $.ajax({
-  url: 'transportation-jobdetails/'+postData,
-  type: 'GET',
-  dataType: 'JSON'
-  });
-  request.done( function (result) {
-    console.log(result);
-  var values=JSON.stringify(result);
-  $("#job_code").html(result[0].JobId);
-  $("#shipper_name").html(result[0].Shipper);
-  $("#consignee_name").html(result[0].Consignee);
-  $("#company_name").html(result[0].client_name);
-  $("#shpmnt_terms").html(result[0].ShipmentTerms);
-  $("#consign_desc").html(result[0].CargoDescription);
-  $("#consign_date").html(result[0].Date);
-// console.log(result[0].JobId);
-  });
+// postData=$('#id').val();
+// var request = $.ajax({
+//   url: 'transportation-jobdetails/'+postData,
+//   type: 'GET',
+//   dataType: 'JSON'
+//   });
+//   request.done( function (result) {
+//     console.log(result);
+//   var values=JSON.stringify(result);
+//   $("#job_code").html(result[0].JobId);
+//   $("#shipper_name").html(result[0].Shipper);
+//   $("#consignee_name").html(result[0].Consignee);
+//   $("#company_name").html(result[0].client_name);
+//   $("#shpmnt_terms").html(result[0].ShipmentTerms);
+//   $("#consign_desc").html(result[0].CargoDescription);
+//   $("#consign_date").html(result[0].Date);
+// // console.log(result[0].JobId);
+//   });
 
-}
+// }
 
-//add estimate
-function add_estimate()
+//update estimate
+function update_estimate()
 {
   
   var id=$("#id").val();  
@@ -240,6 +240,7 @@ function add_estimate()
 console.log(estimate_master);
 
 var estimate_master_details =[];
+var estimateDetails_bc=0;
   $('.estmt_details').each(function()
   {
     var Data = {
@@ -252,30 +253,46 @@ var estimate_master_details =[];
          "vat": parseFloat($(this).find('.taxval_data').text()),
          "total": parseFloat($(this).find('.totalval_data').text())
     };
+
     estimate_master_details.push(Data);
-  });
+             
+            });
+   
+            var  estimate_code=$('#master_id').val(); 
+
+            if(estimateDetails_bc==0)
+            {
+             var estimate_master_details ="";
+            }
+            if(deletedidarray.length == 0)
+            {
+             deletedidarray="";
+            }
+  
   var postData = {
    
     estimate_master: estimate_master,
-     estimate_master_details: estimate_master_details
+     estimate_master_details: estimate_master_details,
+     Id:estimate_code,
+     deleted:deletedidarray
       };
   var request = $.ajax({
-    url: 'transportation-estimate',
+    url: '../update-estimate',
     type: 'POST',
     data: {postData:postData} ,
     dataType: 'JSON'
     });
     request.done( function ( data ) {
     
-    if(!alert('estimate Created Successfully!')){window.location.href=""}
+    if(!alert('estimate updated Successfully!')){window.location.href=""}
     });
     request.fail( function ( jqXHR, textStatus) {
-      alert('estimate Created Successfully');
+      alert('estimate updated Successfully');
       // window.location.reload();
       if (jqXHR.responseText=="success")
       {
       
-       if(!alert('estimate3 created Successfully!')){window.location.href=""}
+       if(!alert('estimate3 updated Successfully!')){window.location.href=""}
    
       }
     });
@@ -302,3 +319,12 @@ function Changepanel()
   $('.vzbtn2').removeClass("btn-success");
   $('.vzbtn3').removeClass("btn-success");
 }
+function deletedids(id,el)
+  {
+    deletedidarray.push(id);
+    console.log(id);
+    console.log(deletedidarray);
+    $(el).closest("tr").remove();
+    calculates();
+  return false;
+  }

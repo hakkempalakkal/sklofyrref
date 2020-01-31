@@ -33,9 +33,9 @@ foreach ($value as $key => $value1)
 	?>
                   <tr>
                   <!-- <td class="text-center"><?php echo $value1->id;?></td> -->
-                  <td class="text-center"><?php echo $value1->display_name;?></td>
-                  <td class="text-center"><?php echo $value1->name;?></td>     
-                  <td class="text-center"><?php echo $value1->description;?></td>
+                  <td ><?php echo $value1->display_name;?></td>
+                  <td ><?php echo $value1->name;?></td>     
+                  <td ><?php echo $value1->description;?></td>
                     <td><ul class="nav"><li class="dropdown">
                 <a class="btn btn-sm dropdown-toggle" style="width: 50px;" data-toggle="dropdown" href="#">
                   <i class="fa fa-ellipsis-v"></i> 

@@ -135,28 +135,27 @@
                 <div class="panel-body">
                     <div class=" row">
                         <div class="form-group  col-md-3">
-                        <!-- value="<?php echo $values[0]->JobId; ?> -->
                             <label class="control-label ">Number</label>
-                            <input type="hidden" name="id" id="id"  />
-                            <input type="hidden" name="type" id="type" value="" />
-                            <input type="text" id="code" name="code" class="form-control" placeholder="<?php echo $code[0]->Number + 1; ?>" readonly="readonly" value="<?php echo $code[0]->Number + 1; ?>">
+                            <input type="hidden" name="id" id="id" value="<?php echo $values[0]->JobId; ?>" />
+                            <input type="hidden" name="type" id="type" value="<?php echo $values[0]->Type; ?>" />
+                            <input type="text" id="code" name="code" class="form-control" placeholder="<?php echo $values[0]->Number ?>" readonly="readonly" value="<?php echo $values[0]->Number  ?>">
                         </div>
                         <div class="form-group col-md-3">
 
 
                             <label class="control-label" for="date">Date</label>
-                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control" id="date" value="<?php echo $values[0]->Date; ?>" name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                     </div>
                     <div class=" row">
                         <div class="form-group col-md-4">
                             <label class="control-label">Shipper Name</label>
-                            <input maxlength="100" type="text" required="required" id="shippername" class="form-control" placeholder="Enter shipper Name" />
+                            <input maxlength="100" type="text" required="required" id="shippername" value="<?php echo $values[0]->Shipper; ?>" class="form-control" placeholder="Enter shipper Name" />
                             <input maxlength="100" type="hidden" required="required" id="shipperid" class="form-control" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Consignee Name</label>
-                            <input maxlength="100" type="text" required="required" id="consigneename" class="form-control" placeholder="Enter Consignee Name" />
+                            <input maxlength="100" type="text" required="required" id="consigneename"  value="<?php echo $values[0]->Shipper; ?>" class="form-control" placeholder="Enter Consignee Name" />
                             <input maxlength="100" type="hidden" required="required" id="consignor_id" class="form-control" />
                         </div>
                         <div class="form-group col-md-4">
@@ -185,30 +184,30 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Shippment Terms</label>
-                            <input maxlength="100" type="text" id="Shipment_Terms" required="required" class="form-control" placeholder="shipment terms" />
+                            <input maxlength="100" type="text" id="Shipment_Terms"  value="<?php echo $values[0]->ShipmentTerms; ?>" required="required" class="form-control" placeholder="shipment terms" />
                         </div>
                     </div>
                     <div class=" row" id="airsection">
                         <div class="form-group col-md-4">
                             <label class="control-label"> Cargo Description</label>
-                            <input maxlength="100" type="text" id="cargo_description" required="required" class="form-control" placeholder="Cargo Description" />
+                            <input maxlength="100" type="text" id="cargo_description"  value="<?php echo $values[0]->CargoDescription; ?>" required="required" class="form-control" placeholder="Cargo Description" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Origin</label>
-                            <input maxlength="100" type="text" id="origin_air" required="required" class="form-control" placeholder="Origin " />
+                            <input maxlength="100" type="text" id="origin_air" required="required"  value="<?php echo $values[0]->Origin; ?>" class="form-control" placeholder="Origin " />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Destination</label>
-                            <input maxlength="100" type="text" id="destination_air" required="required" class="form-control" placeholder=" Destination" />
+                            <input maxlength="100" type="text" id="destination_air"  value="<?php echo $values[0]->Destination; ?>" required="required" class="form-control" placeholder=" Destination" />
                         </div>
 
                         <div class="form-group col-md-4">
                             <label class="control-label " for="date">ETD</label>
-                            <input class="form-control etd_air" id="etd_air" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control etd_air" id="etd_air" value="<?php echo $values[0]->Etd; ?>" name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label" for="date">ETA</label>
-                            <input class="form-control eta_air" id="eta_air" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control eta_air" id="eta_air" value="<?php echo $values[0]->Eta; ?>" name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Carrier</label>
@@ -227,50 +226,50 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">PO no. </label>
-                            <input maxlength="100" type="text" id="PoNo_air" required="required" class="form-control" placeholder=" PO no." />
+                            <input maxlength="100" type="text" id="PoNo_air"  value="<?php echo $values[0]->PoNo; ?>" required="required" class="form-control" placeholder=" PO no." />
                         </div>
                         <div class="col-md-4">
                             <div class="row">
 
                         <div class="form-group col-md-4">
                             <label class="control-label">MAWB </label>
-                            <input maxlength="100" type="text" id="Mawb_air" required="required" class="form-control mawbcarrier" id="mawbcarrier" placeholder="prefix code" />
+                            <input maxlength="100" type="text" id="Mawb_air"    required="required" class="form-control mawbcarrier" id="mawbcarrier" placeholder="prefix code" />
                         </div>
                         <div class="form-group col-md-8">
                             <label class="control-label"> &nbsp;</label>
-                            <input maxlength="100" type="text" id="Mawb_code" required="required" class="form-control mawbcarrier" id="mawbcarrier" placeholder="enter serial number" />
+                            <input maxlength="100" type="text" id="Mawb_code" value="<?php echo $values[0]->Mawb; ?>" required="required" class="form-control mawbcarrier" id="mawbcarrier" placeholder="enter serial number" />
                         </div>
                         </div>
                             </div>
                         <div class="form-group col-md-4">
                             <label class="control-label"> HAWB</label>
-                            <input maxlength="100" type="text" id="Hawb" required="required" class="form-control" placeholder=" HAWB" />
+                            <input maxlength="100" type="text" id="Hawb"  value="<?php echo $values[0]->Hawb; ?>" required="required" class="form-control" placeholder=" HAWB" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label"> No_pcs</label>
-                            <input maxlength="100" type="text" id="Nopcs_air" required="required" class="form-control" placeholder=" No_pcs" />
+                            <input maxlength="100" type="text" id="Nopcs_air" required="required"  value="<?php echo $values[0]->Nopcs; ?>" class="form-control" placeholder=" No_pcs" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Actual Weight </label>
-                            <input maxlength="100" type="text" id="ActualWeight_air" required="required" class="form-control" placeholder="Actual Weight" />
+                            <input maxlength="100" type="text" id="ActualWeight_air" required="required"  value="<?php echo $values[0]->ActualWeight; ?>" class="form-control" placeholder="Actual Weight" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Chargeable Weight </label>
-                            <input maxlength="100" type="text" id="ChargeableWeight_air" required="required" class="form-control" placeholder="Chargeable Weight " />
+                            <input maxlength="100" type="text" id="ChargeableWeight_air" required="required"  value="<?php echo $values[0]->ChargeableWeight; ?>" class="form-control" placeholder="Chargeable Weight " />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Dimension</label>
-                            <input maxlength="100" type="text" id="Dimension" required="required" class="form-control" placeholder="Dimension" />
+                            <input maxlength="100" type="text" id="Dimension" required="required"  value="<?php echo $values[0]->Dimension; ?>" class="form-control" placeholder="Dimension" />
                         </div>
                     </div>
                     <div class=" row" id="seasection">
                         <div class="form-group col-md-4">
                             <label class="control-label" for="date">ETD</label>
-                            <input class="form-control etd_sea" id="etd_sea" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control etd_sea" id="etd_sea" value="<?php echo $values[0]->Etd; ?>"  name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label" for="date">ETA</label>
-                            <input class="form-control eta_sea" id="eta_sea" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control eta_sea" id="eta_sea" value="<?php echo $values[0]->Eta; ?>"  name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Carrier</label>
@@ -289,59 +288,59 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">PO no. </label>
-                            <input maxlength="100" type="text" id="PoNo_sea" required="required" class="form-control" placeholder=" PO no." />
+                            <input maxlength="100" type="text" id="PoNo_sea"  value="<?php echo $values[0]->PoNo; ?>" required="required" class="form-control" placeholder=" PO no." />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label"> POL </label>
-                            <input maxlength="100" type="text" id="Pol" required="required" class="form-control" placeholder="POL" />
+                            <input maxlength="100" type="text" id="Pol"  value="<?php echo $values[0]->Pol; ?>" required="required" class="form-control" placeholder="POL" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">POD</label>
-                            <input maxlength="100" type="text" id="Pod" required="required" class="form-control" placeholder="POD " />
+                            <input maxlength="100" type="text" id="Pod"  value="<?php echo $values[0]->Pod; ?>" required="required" class="form-control" placeholder="POD " />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">MBL</label>
-                            <input maxlength="100" type="text" id="Mbl_sea" required="required" class="form-control" placeholder=" MBL" />
+                            <input maxlength="100" type="text" id="Mbl_sea"  value="<?php echo $values[0]->Mbl; ?>" required="required" class="form-control" placeholder=" MBL" />
                         </div>
 
                         <div class="form-group col-md-4">
                             <label class="control-label">HBL </label>
-                            <input maxlength="100" type="text" id="Hbl" required="required" class="form-control" placeholder=" HBL" />
+                            <input maxlength="100" type="text" id="Hbl"  value="<?php echo $values[0]->Hbl; ?>" required="required" class="form-control" placeholder=" HBL" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label"> Cont.type</label>
-                            <input maxlength="100" type="text" id="ContType" required="required" class="form-control" placeholder=" cont. type" />
+                            <input maxlength="100" type="text" id="ContType"  value="<?php echo $values[0]->ContType; ?>" required="required" class="form-control" placeholder=" cont. type" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label"> No_Containers</label>
-                            <input maxlength="100" type="text" id="NoContainers" required="required" class="form-control" placeholder=" No_containers" />
+                            <input maxlength="100" type="text" id="NoContainers"  value="<?php echo $values[0]->NoContainers; ?>" required="required" class="form-control" placeholder=" No_containers" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Containers_no. </label>
-                            <input maxlength="100" type="text" id="ContainerNo" required="required" class="form-control" placeholder="containers number" />
+                            <input maxlength="100" type="text" id="ContainerNo"  value="<?php echo $values[0]->ContainerNo; ?>" required="required" class="form-control" placeholder="containers number" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Actual Weight </label>
-                            <input maxlength="100" type="text" id="ActualWeight_sea" required="required" class="form-control" placeholder=" Weight " />
+                            <input maxlength="100" type="text" id="ActualWeight_sea"  value="<?php echo $values[0]->ActualWeight; ?>" required="required" class="form-control" placeholder=" Weight " />
                         </div>
 
                     </div><br>
                     <div class=" row" id="transportationsection">
                         <div class="form-group col-md-4">
                             <label class="control-label">Origin</label>
-                            <input maxlength="100" type="text" id="Origin_transport" required="required" class="form-control" placeholder=" origin" />
+                            <input maxlength="100" type="text" id="Origin_transport"  value="<?php echo $values[0]->Origin; ?>" required="required" class="form-control" placeholder=" origin" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Destination</label>
-                            <input maxlength="100" type="text" id="Destination_transport" required="required" class="form-control" placeholder=" destination" />
+                            <input maxlength="100" type="text" id="Destination_transport"  value="<?php echo $values[0]->Destination; ?>" required="required" class="form-control" placeholder=" destination" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label" for="date">ETD</label>
-                            <input class="form-control etd_transport" id="etd_transport" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control etd_transport" id="etd_transport"  value="<?php echo $values[0]->Etd; ?>" name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label" for="date">ETA</label>
-                            <input class="form-control eta_transport" id="eta_transport" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control eta_transport" id="eta_transport"  value="<?php echo $values[0]->Eta; ?>" name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Carrier</label>
@@ -360,44 +359,44 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">PO no. </label>
-                            <input maxlength="100" type="text" id="PoNo_transport" required="required" class="form-control" placeholder=" PO no." />
+                            <input maxlength="100" type="text" id="PoNo_transport"  value="<?php echo $values[0]->PoNo; ?>" required="required" class="form-control" placeholder=" PO no." />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label"> MBL </label>
-                            <input maxlength="100" type="text" id="Mbl_transport" required="required" class="form-control" placeholder="MBL" />
+                            <input maxlength="100" type="text" id="Mbl_transport"  value="<?php echo $values[0]->Mbl; ?>" required="required" class="form-control" placeholder="MBL" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">No.pcs</label>
-                            <input maxlength="100" type="text" id="Nopcs_transport" required="required" class="form-control" placeholder="no-pcs " />
+                            <input maxlength="100" type="text" id="Nopcs_transport"  value="<?php echo $values[0]->Nopcs; ?>" required="required" class="form-control" placeholder="no-pcs " />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Truck_no</label>
-                            <input maxlength="100" type="text" id="TruckNo" required="required" class="form-control" placeholder=" truck number" />
+                            <input maxlength="100" type="text" id="TruckNo" required="required"  value="<?php echo $values[0]->TruckNo; ?>" class="form-control" placeholder=" truck number" />
                         </div>
 
                         <div class="form-group col-md-4">
                             <label class="control-label">Actual Weight </label>
-                            <input maxlength="100" type="text" id="ActualWeight_transport" required="required" class="form-control" placeholder=" Weight " />
+                            <input maxlength="100" type="text" id="ActualWeight_transport"  value="<?php echo $values[0]->ActualWeight; ?>" required="required" class="form-control" placeholder=" Weight " />
                         </div>
 
                     </div>
                     <div class=" row" id="landsection">
                         <div class="form-group col-md-4">
                             <label class="control-label">Origin</label>
-                            <input maxlength="100" type="text" id="Origin_land" required="required" class="form-control" placeholder=" origin" />
+                            <input maxlength="100" type="text" id="Origin_land"  value="<?php echo $values[0]->Origin; ?>" required="required" class="form-control" placeholder=" origin" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Destination</label>
-                            <input maxlength="100" type="text" id="Destination_land" required="required" class="form-control" placeholder=" destination" />
+                            <input maxlength="100" type="text" id="Destination_land" required="required"  value="<?php echo $values[0]->Destination; ?>" class="form-control" placeholder=" destination" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label" for="date">ETD</label>
-                            <input maxlength="100" type="text" id="etd_land" name="date" required="required" class="form-control" placeholder=" ETD" />
+                            <input maxlength="100" type="text" id="etd_land" name="date" required="required"  value="<?php echo $values[0]->Etd; ?>" class="form-control" placeholder=" ETD" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label" for="date">ETA</label>
 
-                            <input maxlength="100" type="text" id="eta_land" name="date" required="required" class="form-control" placeholder=" ETA" />
+                            <input maxlength="100" type="text" id="eta_land" name="date" required="required"  value="<?php echo $values[0]->Eta; ?>" class="form-control" placeholder=" ETA" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Carrier</label>
@@ -416,31 +415,31 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">PO no. </label>
-                            <input maxlength="100" type="text" id="PoNo_land" required="required" class="form-control" placeholder=" PO no." />
+                            <input maxlength="100" type="text" id="PoNo_land"  value="<?php echo $values[0]->PoNo; ?>" required="required" class="form-control" placeholder=" PO no." />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label"> MAWB </label>
-                            <input maxlength="100" type="text" id="Mawb_land" required="required" class="form-control" placeholder="MAWB" />
+                            <input maxlength="100" type="text" id="Mawb_land"  value="<?php echo $values[0]->Mawb; ?>" required="required" class="form-control" placeholder="MAWB" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">No_pcs</label>
-                            <input maxlength="100" type="text" id="Nopcs_land" required="required" class="form-control" placeholder="no_pcs " />
+                            <input maxlength="100" type="text" id="Nopcs_land" required="required"  value="<?php echo $values[0]->Nopcs; ?>" class="form-control" placeholder="no_pcs " />
                         </div>
 
                         <div class="form-group col-md-4">
                             <label class="control-label">Chargeable Weight </label>
-                            <input maxlength="100" type="text" id="ChargeableWeight_land" required="required" class="form-control" placeholder=" Weight " />
+                            <input maxlength="100" type="text" id="ChargeableWeight_land"  value="<?php echo $values[0]->ChargeableWeight; ?>" required="required" class="form-control" placeholder=" Weight " />
                         </div>
                     </div>
                     <div class=" row">
 
                         <div class="form-group col-md-4">
                             <label class="control-label">BAYAN No.</label>
-                            <input maxlength="100" type="text" id="BayanNo" required="required" class="form-control" placeholder="BAYAN number" />
+                            <input maxlength="100" type="text" id="BayanNo" required="required"  value="<?php echo $values[0]->BayanNo; ?>" class="form-control" placeholder="BAYAN number" />
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">BAYAN Date</label>
-                            <input class="form-control" id="BayanDate" name="date" placeholder="MM/DD/YYY" type="text" />
+                            <input class="form-control" id="BayanDate"  value="<?php echo $values[0]->BayanDate; ?>" name="date" placeholder="MM/DD/YYY" type="text" />
                         </div>
                         <div class="form-group col-md-4">
                             <label for="exampleInputname1">Status</label>
@@ -452,7 +451,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Job Status</label>
-                            <input maxlength="100" type="text" id="JobStatus" required="required" class="form-control" placeholder="job status" />
+                            <input maxlength="100" type="text" id="JobStatus"  value="<?php echo $values[0]->JobStatus; ?>" required="required" class="form-control" placeholder="job status" />
                         </div>
                         <div class="form-group col-md-4">
                             <label for="exampleInputname1">POP</label>
@@ -480,7 +479,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label class="control-label">Description</label>
-                            <input maxlength="100" type="text" id="Description" required="required" class="form-control" placeholder="consignment description" />
+                            <input maxlength="100" type="text" id="Description"  value="<?php echo $values[0]->Description; ?>" required="required" class="form-control" placeholder="description" />
                         </div>
                         <div class="form-group col-md-4">
                             <label for="exampleInputname1">Salesman</label>
@@ -503,7 +502,7 @@
                 </div>
             </div>
          </div>
-            <div class="col-md-12 ">
+            <div class="col-md-11 ">
                 <div class="panel panel-primary setup-content " id="step-3">
                     <div class="panel-heading">
                         <h3 class="panel-title">Consignment</h3>
@@ -511,7 +510,7 @@
                     <div class="panel-body">
                         <section class="content">
 
-                            <div class="col-md-10">
+                            <div class="col-md-9">
                                 <h4 class="box-title">Job</h4>
                                 <div class="box box-primary">
                                     <div class="box-header with-border">
@@ -519,10 +518,10 @@
 
                                             <div class="form-group col-md-1">
 
-                                                <input type="hidden" id="estimate_code" name="code" class="form-control" placeholder="<?php echo $codes[0]->estimate_no + 1; ?>" readonly="readonly" value="<?php echo $codes[0]->estimate_no + 1; ?>">
-
+                                                <input type="hidden" id="estimate_code" name="code" class="form-control" placeholder="<?php echo $codes[0]->estimate_no; ?>" readonly="readonly" value="<?php echo $codes[0]->estimate_no; ?>">
+                                                <input type="hidden" name="master_id" id="master_id"  value="<?php  echo $estimatedata[0]->estimate_masterid; ?>" />
                                                 <label class="control-label">Code</label>
-                                                <input maxlength="100" onchange="getdata();" type="text" id="desc_code" class="form-control" placeholder=" code" />
+                                                <input maxlength="100" onchange="getdatadesc();" type="text" id="desc_code" class="form-control" placeholder=" code" />
                                             </div>
                                             <div class="form-group col-md-2">
                                                 <label class="control-label">Description</label>
@@ -579,7 +578,25 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody class="dataadd">
+                                                            <?php foreach($estimate as $key=>$value) {
+                                        ?>
+<tr>
+                              <td class="job_desc"><?php echo $value->description; ?> </td>
+                               <td class="job_price"><?php echo $value->unitprice; ?></td>
+                               <td class="job_price"><?php echo $value->quantity; ?></td>
+                               <td class='subtotalval_data'><?php echo ($value->subtotal)*($value->conv_factor); ?></td>
+                                <td class="taxval_data"><?php echo $value->vat; ?> </td> 
+                                 <td class="totalval_data"><?php echo $value->total; ?></td>
+                                  <td>
+                                  <a class="" onclick="deletedids(<?php echo $value->estimate_details_id; ?>,this)"><i class="fa fa-trash-o"></i></a>
+                                  <input type="hidden" class="currency" value="<?php echo $value->unit_type; ?>"/>
+                                  <input type='hidden' class="cov_factor" value="<?php echo $value->conv_factor; ?>"/>
+                                  <input type='hidden' class="credit_detail_id" value="<?php echo $value->estimate_details_id; ?>"/>
+                                  <!-- <input type='hidden' class="desc_code" value="<?php echo $value->description; ?>"/> -->
+                                   </td>
+                              </tr>
 
+                                     <?php  } ?> 
                                                             </tbody>
                                                             <tfoot>
                                                             </tfoot>
@@ -588,11 +605,11 @@
                                                     <div id="ContentPlaceHolder1_upTotals">
                                                         <div style="float: right;">
                                                             <span id="ContentPlaceHolder1_lbl">TOTAL</span>
-                                                            <input name="total" type="text" value="" readonly="readonly" id="total" class="form-control " style="width: 100%;">
+                                                            <input name="total" type="text" value="<?php echo $estimatedata[0]->total_amount; ?>" readonly="readonly" id="total" class="form-control " style="width: 100%;">
                                                             <span id="ContentPlaceHolder1_Label1">Vat Total</span>
-                                                            <input name="vat_total" type="text" value="" readonly="readonly" id="vat_total" class="form-control " style="width: 100%;">
+                                                            <input name="vat_total" type="text" value="<?php echo $estimatedata[0]->tax_amount; ?>" readonly="readonly" id="vat_total" class="form-control " style="width: 100%;">
                                                             <span id="ContentPlaceHolder1_Label2">Grand Total</span>
-                                                            <input name="grand_total" type="text" value="" readonly="readonly" id="grand_total" class="form-control " style="width: 100%;">
+                                                            <input name="grand_total" type="text" value="<?php echo $estimatedata[0]->grand_total; ?>" readonly="readonly" id="grand_total" class="form-control " style="width: 100%;">
                                                         </div>
                                                     </div>
                                                     <!-- /.box-body -->
@@ -607,7 +624,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <h4 class="box-title">Job Description </h4>
                                 <div class="box box-primary">
                                     <div class="box-header with-border">
@@ -615,27 +632,28 @@
                                     <div class="box-body">
                                         <strong><i class=""></i> Job</strong>
                                         <p class="text-dark" id="job_code">
+                                        <?php echo $estimatedata[0]->JobId;?>
                                         </p>
                                         <hr>
                                         <strong><i class=""></i> Shipper</strong>
-                                        <p class="text-dark" id="shipper_name"> </p>
+                                        <p class="text-dark" id="shipper_name">  <?php echo $estimatedata[0]->consignor;?></p></p>
                                         <hr>
                                         <strong><i class=""></i> Consignee</strong>
-                                        <p class="text-dark" id="consignee_name"> </p>
+                                        <p class="text-dark" id="consignee_name"> <?php echo $estimatedata[0]->consignee;?> </p>
                                         <hr>
                                         <strong><i class=""></i> Client Company</strong>
-                                        <p class="text-dark" id="company_name"> </p>
+                                        <p class="text-dark" id="company_name"><?php echo $estimatedata[0]->clientenglish;?></p>
                                         <hr>
                                         <strong><i class=""></i> Shipment Terms</strong>
-                                        <p class="text-dark" id="shpmnt_terms"> </p>
+                                        <p class="text-dark" id="shpmnt_terms"> <?php echo $estimatedata[0]->ShipmentTerms;?></p>
                                         <hr>
                                         <strong><i class=""></i> Consignment description</strong>
-                                        <p class="text-dark" id="consign_desc"> </p>
+                                        <p class="text-dark" id="consign_desc"> <?php echo $estimatedata[0]->CargoDescription;?></p>
                                     
                                     </div>
 
                                 </div>
-                                <input type="submit" name="submit" onclick="add_estimate();" value="Submit" id="submit" class="btn btn-success">
+                                <input type="submit" name="submit" onclick="update_estimate();" value="Submit" id="submit" class="btn btn-success">
                             </div>
                             <!-- <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>  -->
 
@@ -672,14 +690,14 @@
 
 
 <script src="<?php echo base_url(); ?>/assets/js/moment.js"></script>
-<script src="<?php echo base_url(); ?>/assets/user_scripts/transaction/job_script.js"></script>
+<script src="<?php echo base_url(); ?>/assets/user_scripts/transaction/edit_job.js"></script>
 <!-- <script src="<?php echo base_url(); ?>/assets/user_scripts/transaction/plannes_script.js"></script> -->
 <script src="<?php echo base_url(); ?>/assets/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#jobsubmit').click(function() {
             update();
-            jobdetails();
+            // jobdetails();
         });
     });
 
@@ -873,4 +891,46 @@
 
 
     }
+    $("#client_name").val("<?php echo  $values[0]->client_name; ?>");
+    $("#shipment_type").val("<?php echo  $values[0]->shipment_type; ?>");
+    $("#Carrier_air").val("<?php echo  $values[0]->Carrier; ?>");
+    $("#Carrier_sea").val("<?php echo  $values[0]->Carrier; ?>");
+    $("#Carrier_transport").val("<?php echo  $values[0]->Carrier; ?>");
+    $("#Carrier_land").val("<?php echo  $values[0]->Carrier; ?>");
+    $("#Status").val("<?php echo  $values[0]->Status; ?>");
+    $("#PoP").val("<?php echo  $values[0]->PoP; ?>");
+    $("#LabUndertaking").val("<?php echo  $values[0]->LabUndertaking; ?>");
+    $("#DocsGuarantee").val("<?php echo  $values[0]->DocsGuarantee; ?>");
+    $("#salesman").val("<?php echo  $values[0]->salesman; ?>");
+    var jobtype=$("#type").val();
+if(jobtype=="air")
+{
+
+            hideall();
+ 
+            $('#airsection').removeClass("hidden");
+
+}
+ else if(jobtype=="sea")   
+ {
+    hideall();
+           
+            $('#seasection').removeClass("hidden");
+ }
+ else if(jobtype=="other")   
+ {
+    hideall();
+           
+    $('#transportationsection').removeClass("hidden");
+ }
+ else if(jobtype=="land")   
+ {
+    hideall();
+           
+    $('#landsection').removeClass("hidden");
+ }
+    Changepanel();
+        $('#step-2').removeClass("hidden");
+        $('.vzbtn2').addClass("btn-success");
+
 </script>

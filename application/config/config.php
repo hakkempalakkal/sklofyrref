@@ -23,11 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
 $config['base_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/Ferryfolkshub/sklofyrref";
-=======
-
->>>>>>> 01b4dcd769c7e62f7fa180f6f6d3f1ac41a293cd
 
 
 

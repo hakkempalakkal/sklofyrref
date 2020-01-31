@@ -36,7 +36,7 @@ var request = $.ajax({
     // console.log(result);
   
    var values=JSON.stringify(result);
-//    alert(values[0].JobId);
+  //  alert(values[0].JobId);
   $("#job_id").text(result["jobdata"][0].JobId);
   $("#client_id").text(result["jobdata"][0].client_id);
   $("#shipper").text(result["jobdata"][0].consignor);
@@ -83,7 +83,7 @@ var Invsum=0;
 
     });
     Invsum=parseFloat(Invsum).toFixed(2);
-    $(".dataadd").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='6' > Total Invoice </td><td style='text-align: right;'>"+Invsum+"</td></tr>"); 
+    $(".dataadd").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='8' > Total Invoice </td><td style='text-align: right;'>"+Invsum+"</td></tr>"); 
 
    console.log(Invsum);
     //credit note 
@@ -161,7 +161,7 @@ var Invsum=0;
 
     });
     Expense=parseFloat(Expense).toFixed(2);
-    $(".postedexpense").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='6' > Total Expense</td><td style='text-align: right;'>"+Expense+"</td></tr>"); 
+    $(".postedexpense").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='8' > Total Expense</td><td style='text-align: right;'>"+Expense+"</td></tr>"); 
 
     var debitnote=0;
     var slno=0;
@@ -268,32 +268,57 @@ function editexpense(masterid)
 function createnewinvoice()
 {
   var jobid = $('#q').val();
+  if(jobid){
   window.location = 'job-invoice/' + jobid;
-  // alert(jobid);
+}
+else{
+  alert("Please Search Job");
+}
 }
 
 function createcreditnote()
 {
   var jobid = $('#q').val();
-  window.location = 'credit-note/' + jobid;
+  if(jobid){
+    window.location = 'credit-note/' + jobid;
+
+  }
+  else{
+    alert("Please Search Job");
+  }
  
 }
 function createpaymentreceipt()
 {
   var clientid = $('#client_id').text();
-  // alert(clientid);
+  if(clientid){
   window.location = 'payment-receipt/' + clientid;
+  }
+  else{
+    alert("Please Search Job");
+  }
  
 }
 function createexpense()
 {
   var jobid = $('#q').val();
+  if(jobid){
   window.location = 'supplier-expense/' + jobid;
+  }
+  else{
+    alert("Please Search Job");
+  }
  
 }
 function createdebitnote()
 {
   var jobid = $('#q').val();
+  if(jobid){
   window.location = 'debit-note/' + jobid;
+  }
+
+   else{
+    alert("Please Search Job");
+  }
  
 }

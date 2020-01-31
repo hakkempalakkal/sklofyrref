@@ -12,7 +12,13 @@
               <table class="table table-striped table-hover indexer" id="table-permissionList">
                 <thead>
                   <tr>
-                   <th></th>
+                  <?php 
+          
+          if (in_array("create clientreceipt",$permission))
+          { 
+             ?>  
+              <th></th>
+          <?php } ?>
                     <th>Code</th>
                     <th>Name</th>
                     <th>Contact Person</th>
@@ -28,8 +34,14 @@ foreach ($value as $key => $value1)
  {  
 	?>
                   <tr>
-                   <td class="text-center"><a class="btn btn-success btn-sm" href="<?php echo  base_url().'payment-receipt'.'/'.$value1->id;?>">payment reciept</a></td> 
-                  <td class="text-center"><?php echo $value1->code;?></td>
+                  <?php 
+          
+          if (in_array("create clientreceipt",$permission))
+          { 
+             ?> 
+                       <td class="text-center"><a class="btn btn-success btn-sm" href="<?php echo  base_url().'payment-receipt'.'/'.$value1->id;?>">payment reciept</a></td> 
+                       <?php } ?>
+                       <td class="text-center"><?php echo $value1->code;?></td>
                   <td class="text-center"><?php echo $value1->name;?></td>     
                   <td class="text-center"><?php echo $value1->contact_person;?></td>
                   <td class="text-center"><?php echo $value1->address;?></td>     

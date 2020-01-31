@@ -2,7 +2,15 @@
   <section class="content-header">
             <h1>
            Shipper Master
+           <?php 
+          
+          if (in_array("create shipper",$permission))
+          { 
+             ?>
               <span class="new-button"><a href="<?php echo base_url(); ?>shipper-create" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> &nbsp;Add New</a></span>
+           <?php
+           }
+           ?>
             </h1>
           
           </section>
@@ -22,7 +30,15 @@
                     <th>Mobile</th>
                     <th>Email</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    <?php 
+          
+          if (in_array("create shipper",$permission))
+          { 
+             ?> 
+                <th>Action</th>
+            <?php
+          }
+          ?> 
                   </tr>
                   <thead>
                   <tbody>
@@ -44,8 +60,10 @@ foreach ($value as $key => $value1)
                       else
                       { ?> <td><span class="label label-danger"><?php echo "Disabled";?></td></span><?php } ?>
                
-     
-              
+     <?php 
+               if (in_array("update shipper",$permission))
+          { 
+             ?> 
                     <td><ul class="nav"><li class="dropdown">
                 <a class="btn btn-sm dropdown-toggle" style="width: 50px;" data-toggle="dropdown" href="#">
                   <i class="fa fa-ellipsis-v"></i> 
@@ -72,6 +90,9 @@ foreach ($value as $key => $value1)
                   <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deactivate</a></li> -->
                 </ul>
               </li>  </ul></td>
+              <?php
+          }
+          ?> 
                   </tr>
                 
 <?php 

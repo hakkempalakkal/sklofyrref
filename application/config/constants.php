@@ -50,11 +50,7 @@ defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREA
 
 //image upload path
 define( 'ROOT_DIR', dirname(__FILE__) );
-<<<<<<< HEAD
 define('IMAGE_PATH' , (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/Ferryfolkshub/sklofyrref/" . '/assets/images/');
-=======
-
->>>>>>> 01b4dcd769c7e62f7fa180f6f6d3f1ac41a293cd
 define('UPLOAD_PATH' , ROOT_DIR . '/../../assets/images/');
 /*
 |--------------------------------------------------------------------------

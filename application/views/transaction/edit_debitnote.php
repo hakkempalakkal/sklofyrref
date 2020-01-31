@@ -257,7 +257,7 @@ foreach($currencylist as $currency)
          </div>
       </div>
    </div>
-   </div>
+  
    </section>
 <script src="<?php echo base_url(); ?>/assets/user_scripts/transaction/edit_debitnote.js"></script>
 <script>

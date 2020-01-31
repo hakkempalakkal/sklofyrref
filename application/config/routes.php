@@ -224,7 +224,7 @@ $route['transportation-update'] = 'transaction/Transaction/update';
 $route['transportation-description/(:any)'] = 'transaction/Transaction/getdescription/$1';
 $route['transportation-jobdetails/(:any)'] = 'transaction/Transaction/jobdetails/$1';
 $route['transportation-estimate'] = 'transaction/Transaction/store_estimate';
-<<<<<<< HEAD
+
 $route['transportation-carrier/(:any)'] = 'transaction/Transaction/getcarrier/$1';
 $route['list-job'] = 'transaction/Transaction/job_transactionlist';
 
@@ -232,9 +232,6 @@ $route['job-closed-status/(:any)'] ='transaction/Transaction/jobclosed_status/$1
 $route['update-estimate'] = 'transaction/Transaction/update_estimate';
 
 
-
-=======
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
 //invoice
 //job-invoice
 $route['job-invoice/(:any)'] = 'transaction/Job_invoice_controller/job_invoice/$1';

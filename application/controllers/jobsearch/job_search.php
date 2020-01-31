@@ -37,6 +37,8 @@ class Job_Search extends CI_Controller {
 	}
 	public function job_description($jobid)
 	{	
+		// 	$user_id=	$this->session->userdata('user_id');
+		// $result['permission']=$this->Login_model->select_all_menu($user_id);
 		$result['jobdata']=$this->Job_searchmodel->select_job_decription($jobid);
 		$result['invoicetotal']=$this->Job_searchmodel->select_invoice_total($jobid);
 		$result['expensetotal']=$this->Job_searchmodel->select_expense_total($jobid);

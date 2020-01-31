@@ -52,7 +52,7 @@ class Shipper extends CI_Controller {
 	{
 		$postdata=$this->input->post('postData');
 		$result= $this->Shipper_model->add($postdata);
-		echo 'success';
+		echo json_encode($result);
 		
 	}
 	public function edit()
@@ -77,7 +77,7 @@ class Shipper extends CI_Controller {
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
 		$result= $this->Shipper_model->update($id,$data);
-		echo 'success';
+		echo json_encode($result);
 		
 	}
 //update status

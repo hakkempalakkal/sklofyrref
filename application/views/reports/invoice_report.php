@@ -11,35 +11,6 @@
             </h1>
           
           </section>
-<<<<<<< HEAD
-<section class="content">
-  <div class="col-md-12">
-    <div class="box box-success">
-      <div class="box-body">
-        <div class="x_panel">
-          <div class="x_content">
-            <div class="row">
-              <div class="col-md-2">
-                <span style="font-weight:700;font-size: 16px;position: absolute; top: 28px;">TOTAL SALES :</span>
-              </div>
-                <div class="col-md-4">
-                  <div class="form-horizontal form-label-left">
-                    <div class="form-group">
-                      <label for="fullname">Starting Date :</label>
-                        <input name="ctl00$ContentPlaceHolder1$txtFromDate" type="date" id="ContentPlaceHolder1_txtFromDate" class="date form-control hasDatepicker" autocomplete="off">
-                    </div>
-                  </div>
-                </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="fullname">Ending Date :</label>
-                        <input name="ctl00$ContentPlaceHolder1$txtToDate" type="date" id="ContentPlaceHolder1_txtToDate" class="date form-control hasDatepicker" autocomplete="off">
-                    </div>
-                  </div>
-                    <div class="col-md-2">
-                      <input type="submit" name="ctl00$ContentPlaceHolder1$btnShow" value="Show" id="ContentPlaceHolder1_btnShow" class="btn btn-success" style="position: absolute; top: 23px; width: 100px;">
-                    </div>
-=======
           <section  class="content">
           
           <div class="row">
@@ -64,7 +35,6 @@
                 </div>
                 <div class="col-md-2 form-group">
                   <input type="text" placeholder="yyyy-mm-dd" id="fromdate" name="date" class="form-control"/>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
                 </div>
                 <div class="col-md-2 form-group">
                   <input type="text" placeholder="yyyy-mm-dd" id="todate" name="date" class="form-control"/>

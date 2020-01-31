@@ -66,7 +66,8 @@ public function debit_note_details()
 			}
 		}
 		
-	
+		echo json_encode($result);
+
 		
 	}
 	

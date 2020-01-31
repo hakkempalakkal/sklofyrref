@@ -246,7 +246,7 @@ foreach($currencylist as $currency)
                      </div>
                   </div>
                </div>
-               <button class="btn btn-primary nextBtn pull-right" style=" margin-top:20px;" type="button">Next</button>
+               <!-- <button class="btn btn-primary nextBtn pull-right" style=" margin-top:20px;" type="button">Next</button> -->
             </div>
          </div>
       </div>

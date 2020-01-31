@@ -62,7 +62,7 @@ public function credit_note_details()
 			}
 		}
 		
-		// echo json_encode( $result );
+		echo json_encode( $result );
 		
 	}
 	

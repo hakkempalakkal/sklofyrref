@@ -58,7 +58,7 @@ class Description extends CI_Controller {
 		
 		$result= $this->Description_model->add($postdata);
 		
-		echo $result;
+		echo json_encode($result);
 		
 	}
 	public function edit()
@@ -83,7 +83,7 @@ class Description extends CI_Controller {
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
 		$result= $this->Description_model->update($id,$data);
-		echo 'success';
+		echo json_encode($result);
 		
 	}
 	//update status

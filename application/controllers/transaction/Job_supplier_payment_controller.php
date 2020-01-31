@@ -73,10 +73,11 @@ class Job_supplier_payment_controller extends CI_Controller {
 				$my_values[] = $row;
 			}
 		}
-		
-    }// echo json_encode( $result );
+		echo json_encode($result);
+
+    }
         //edit job supplier payment 
-        //Edit job-invoice
+     
 		
 	public function edit_job_supplier_payment($id)
 	{

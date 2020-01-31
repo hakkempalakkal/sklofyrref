@@ -150,7 +150,9 @@ class users extends CI_Controller {
 	    else{
 
 			}
+
 	redirect('users');
+	
 	
 	}
 	public function checkMail()

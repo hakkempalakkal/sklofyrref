@@ -84,11 +84,14 @@ concat(consignor.name,',',consignor.address,',',consignor.telephone,'-',consigno
 concat(consignee.name,',',consignee.address,',',consignee.telephone,'-',consignee.mobile,',',consignee.email) as consignee,
 concat(bn.bank_name,',',bn.acc_number,',',bn.other_info,',',bn.iban) as bank
 from jm_invoicemaster ji
+inner join mst_bank bn  on bn.id=ji.Bank
+
 inner join jm_job jj on ji.JobId=jj.JobId
+
 inner join mst_client c on c.id=jj.client_id
 inner join mst_shipper consignor on consignor.id=jj.consignor_id
 inner join mst_shipper consignee on consignee.id=jj.consignee_id
-inner join mst_bank bn  on bn.id=ji.Bank
+
  where ji.InvoiceMasterId=".$data.";";
 
  $query = $this->db->query($dataq);

@@ -11,7 +11,7 @@
             <div class="input-group">
               <input type="text" name="q" id="q" class="form-control" placeholder="Search..."/>
                <span class="input-group-btn">
-                <button type="submit" name="search_job" id="search_job" onclick="search_job()" class="btn btn-flat" ><i class="fa fa-search" ></i></button>
+                <button type="submit" name="search_job" id="search_job"  class="btn btn-flat" onclick="search_job()"><i class="fa fa-search" ></i></button>
               </span>
             </div>
           <!-- </form>  -->
@@ -220,7 +220,7 @@
                         <th> Date</th>
                         <th> Customer</th>
                       
-                        <th  style='text-align: right;'> Amount</th>
+                        <th >  Amount</th>
                         
                      </tr>
                   </thead>
@@ -344,7 +344,7 @@
                      <th> Sl.no</th>
                         <th> Inv Date</th>
                         <th> Doc.#</th>
-                       
+                        <th>Particulars</th>
                         <th> Ref/Inv</th>
                         <th> Supplier</th>
                       

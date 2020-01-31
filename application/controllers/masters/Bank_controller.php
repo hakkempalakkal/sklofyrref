@@ -62,7 +62,8 @@ class Bank_controller extends CI_Controller {
 		// var_dump($postdata);
 		// die();
 		$result= $this->Bank_model->add($postdata);
-		echo $result;
+		// echo $result;
+		echo json_encode($result);
 		
     }
     public function edit()
@@ -88,8 +89,8 @@ class Bank_controller extends CI_Controller {
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
 		$result= $this->Bank_model->update($id,$data);
-		echo 'success';
-	
+		// echo 'success';
+		echo json_encode($result);
 	}
 
 	//update status

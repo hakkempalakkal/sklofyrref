@@ -73,7 +73,8 @@ class Payment_receipt_controller extends CI_Controller {
                       $my_values[] = $row;
                   }
               }
-              
+              echo json_encode($result);
+ 
           }  
 
 

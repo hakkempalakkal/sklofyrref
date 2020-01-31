@@ -61,7 +61,7 @@ class roles extends CI_Controller {
 			
 			}
 
-		 echo 'success';
+			echo json_encode($result);
 		
 	}	
 	public function edit()
@@ -101,7 +101,7 @@ class roles extends CI_Controller {
 				$row["permission_id"]=(int)$row["permission_id"];
 				$this->Roles_model->updaterolepermission($row);
 			}
-		echo 'success';	
+			echo json_encode($result);
 	
 	}
 	

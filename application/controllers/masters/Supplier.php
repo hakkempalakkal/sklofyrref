@@ -56,7 +56,7 @@ class Supplier extends CI_Controller {
 	{
 		$postdata=$this->input->post('postData');
 		$result= $this->Supplier_model->add($postdata);
-		echo 'success';
+		echo json_encode($result);
 		
 	}
 	public function edit()
@@ -81,8 +81,7 @@ class Supplier extends CI_Controller {
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
 		$result= $this->Supplier_model->update($id,$data);
-		echo 'success';
-		
+		echo json_encode($result);
 	}
 	//update status
 	public function enable_status($id)

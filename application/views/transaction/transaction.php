@@ -66,224 +66,6 @@ visibility: hidden
 <div class="container">
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
-<<<<<<< HEAD
-            <div class="stepwizard-step col-xs-2">
-                <a href="#step-1" type="button" class=" vzbtn1 btn btn-success btn-circle"> 1</a>
-                <p><small>Create Shipment</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-2">
-                <a href="#step-2" type="button" class=" vzbtn2 btn btn-default btn-circle">2</a>
-                <p><small>Port Details</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-2">
-                <a href="#step-3" type="button" class=" vzbtn3 btn btn-default btn-circle">3</a>
-=======
-        <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-1" type="button" class="btn btn-success btn-circle" > 1</a>
-                <p><small>Create Shipment</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-2" type="button" class="btn btn-default btn-circle" >2</a>
-                <p><small>Port Details</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-3" onclick="jobdetails();" type="button" class="btn btn-default btn-circle" >3</a>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
-                <p><small>Plannes/Consignment</small></p>
-            </div>
-            <!-- <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-4" type="button" class="btn btn-default btn-circle" >4</a>
-                <p><small>Summary</small></p>
-<<<<<<< HEAD
-            </div> -->
-
-=======
-            </div>
-           
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
-        </div>
-    </div>
-    
-    <form role="form">
-    <div class="col-md-11 ">
-        <div class="panel panel-primary setup-content" id="step-1">
-            <div class="panel-heading">
-                 <h3 class="panel-title">Shipper</h3>
-            </div>
-            <div class="panel-body">
-            <div class=" row">
-            <div class="form-group">
-              <b>  <h4>   &nbsp; &nbsp; Which type of shipment would you like to create ?</h4></b><br>
-                &nbsp; &nbsp;
-                    <label>
-                    <button class="btn btn-primary nextBtn pull-right trans-type"  id="air" type="button" value="Air">Air</button>
-                   
-                    </label>  &nbsp; &nbsp;
-                    <label> 
-                    <button class="btn btn-primary nextBtn pull-right trans-type"   id="sea" type="button" value="Sea">Sea</button>
-                   
-                    </label>  &nbsp; &nbsp;
-                    <label>
-                    <button class="btn btn-primary nextBtn pull-right trans-type" id="transportation" type="button" value="Transportation">Transportation</button>
-                   
-                    
-                    </label>  &nbsp; &nbsp;
-                    <label>
-                    <button class="btn btn-primary nextBtn pull-right trans-type" id="land" type="button" value="Land">Land</button>
-                  
-                    
-                    </label>&nbsp; &nbsp;
-                  </div>
-                  </div>
-</div>
-                <!-- <button class="btn btn-primary nextBtn pull-right" type="button">Next</button> -->
-            </div>
-        </div>
-        <div class="col-md-12 ">
-        <div class="panel panel-primary setup-content" id="step-2">
-        <div class="panel-heading">
-                 <h3 class="panel-title">Shipper</h3>
-            </div>
-            <div class="panel-body">
-            <div class=" row">
-            <div class="form-group  col-md-3">
-                    <label class="control-label ">Number</label>
-                    <input type="hidden" name="id" id="id"  value="<?php  echo $values[0]->JobId; ?>" />
-                    <input type="hidden" name="type" id="type"  value="" />
-                    <input type="text" id="code"  name="code" class="form-control" placeholder="<?php echo $code[0]->Number+1;?>" readonly="readonly" value="<?php echo $code[0]->Number+1;?>">
-                </div>
-<<<<<<< HEAD
-                <div class="panel-body">
-                    <div class=" row">
-                        <div class="form-group  col-md-3">
-                        <!-- value="<?php echo $values[0]->JobId; ?> -->
-                            <label class="control-label ">Number</label>
-                            <input type="hidden" name="id" id="id"  />
-                            <input type="hidden" name="type" id="type" value="" />
-                            <input type="text" id="code" name="code" class="form-control" placeholder="<?php echo $code[0]->Number + 1; ?>" readonly="readonly" value="<?php echo $code[0]->Number + 1; ?>">
-                        </div>
-                        <div class="form-group col-md-3">
-
-
-                            <label class="control-label" for="date">Date</label>
-                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
-                        </div>
-                    </div>
-                    <div class=" row">
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Shipper Name</label>
-                            <input maxlength="100" type="text" required="required" id="shippername" class="form-control" placeholder="Enter shipper Name" />
-                            <input maxlength="100" type="hidden" required="required" id="shipperid" class="form-control" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Consignee Name</label>
-                            <input maxlength="100" type="text" required="required" id="consigneename" class="form-control" placeholder="Enter Consignee Name" />
-                            <input maxlength="100" type="hidden" required="required" id="consignor_id" class="form-control" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="exampleInputname1">Client Name</label>
-                            <input type="hidden" name="client_id" id="client_id" value="" />
-                            <select class="form-control" name="client_name" id="client_name" value="--Select Type--">
-                                <option value="select">--Select Type--</option>
-                                <?php
-
-                                foreach ($clientlist as $client) {
-                                    echo '<option value="' . $client->name . '" id="' . $client->id . '">' . $client->name . '</option>';
-                                }
-                                ?>
-
-                            </select>
-                        </div>
-                    </div>
-                    <div class=" row">
-                        <div class="form-group col-md-4">
-                            <label for="exampleInputname1">Type</label>
-                            <select class="form-control" name="shipment_type" id="shipment_type" value="--Select Type--">
-                                <option value="bank">--Select Type--</option>
-                                <option value="Import">Import</option>
-                                <option value="Export">Export</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Shippment Terms</label>
-                            <input maxlength="100" type="text" id="Shipment_Terms" required="required" class="form-control" placeholder="shipment terms" />
-                        </div>
-                    </div>
-                    <div class=" row" id="airsection">
-                        <div class="form-group col-md-4">
-                            <label class="control-label"> Cargo Description</label>
-                            <input maxlength="100" type="text" id="cargo_description" required="required" class="form-control" placeholder="Cargo Description" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Origin</label>
-                            <input maxlength="100" type="text" id="origin_air" required="required" class="form-control" placeholder="Origin " />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Destination</label>
-                            <input maxlength="100" type="text" id="destination_air" required="required" class="form-control" placeholder=" Destination" />
-                        </div>
-
-                        <div class="form-group col-md-4">
-                            <label class="control-label " for="date">ETD</label>
-                            <input class="form-control etd_air" id="etd_air" name="date" placeholder="MM/DD/YYY" type="text" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label" for="date">ETA</label>
-                            <input class="form-control eta_air" id="eta_air" name="date" placeholder="MM/DD/YYY" type="text" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Carrier</label>
-                            <!-- <input maxlength="100" type="text"  id="Carrier_air" required="required" class="form-control" placeholder=" Carrier" /> -->
-                            <select class="form-control " name="Carrier_air" id="Carrier_air" value="">
-                                <option value="select">--Select Type--</option>
-                                <?php
-
-                                foreach ($carrierlist as $carrier) {
-                                    if ($carrier->carrier_type == "Air") {
-                                        echo '<option code="' . $carrier->code . '" value="' . $carrier->name . '" id="' . $carrier->id . '">' . $carrier->name . '&nbsp;' . $carrier->code . '</option>';
-                                    }
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">PO no. </label>
-                            <input maxlength="100" type="text" id="PoNo_air" required="required" class="form-control" placeholder=" PO no." />
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row">
-
-                        <div class="form-group col-md-4">
-                            <label class="control-label">MAWB </label>
-                            <input maxlength="100" type="text" id="Mawb_air" required="required" class="form-control mawbcarrier" id="mawbcarrier" placeholder="prefix code" />
-                        </div>
-                        <div class="form-group col-md-8">
-                            <label class="control-label"> &nbsp;</label>
-                            <input maxlength="100" type="text" id="Mawb_code" required="required" class="form-control mawbcarrier" id="mawbcarrier" placeholder="enter serial number" />
-                        </div>
-                        </div>
-                            </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label"> HAWB</label>
-                            <input maxlength="100" type="text" id="Hawb" required="required" class="form-control" placeholder=" HAWB" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label"> No_pcs</label>
-                            <input maxlength="100" type="text" id="Nopcs_air" required="required" class="form-control" placeholder=" No_pcs" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Actual Weight </label>
-                            <input maxlength="100" type="text" id="ActualWeight_air" required="required" class="form-control" placeholder="Actual Weight" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Chargeable Weight </label>
-                            <input maxlength="100" type="text" id="ChargeableWeight_air" required="required" class="form-control" placeholder="Chargeable Weight " />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Dimension</label>
-                            <input maxlength="100" type="text" id="Dimension" required="required" class="form-control" placeholder="Dimension" />
-                        </div>
-=======
                 <div class="form-group col-md-3">
                   
                   
@@ -327,7 +109,6 @@ foreach($clientlist as $client)
                         <option value="Import">Import</option>
                         <option value="Export">Export</option>
                       </select>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
                     </div>
                     <div class="form-group col-md-4">
                     <label class="control-label">Shippment Terms</label>
@@ -537,7 +318,6 @@ foreach($carrierlist as $carrier)
                 <div class="form-group col-md-4">
                     <label class="control-label" for="date">ETA</label>
 
-<<<<<<< HEAD
                         <div class="form-group col-md-4">
                             <label class="control-label">BAYAN No.</label>
                             <input maxlength="100" type="text" id="BayanNo" required="required" class="form-control" placeholder="BAYAN number" />
@@ -604,25 +384,6 @@ foreach($carrierlist as $carrier)
                   
                 <button class="btn btn-primary nextBtn pull-right"  id="jobsubmit" type="button">Next</button> 
                     
-=======
-                    <input maxlength="100" type="text" id="eta_land" name="date" required="required" class="form-control" placeholder=" ETA" />
-                </div>
-                <div class="form-group col-md-4">
-                    <label class="control-label">Carrier</label>
-                    <!-- <input maxlength="100" type="text" id="Carrier_land" required="required" class="form-control" placeholder=" Carrier" /> -->
-                    <select class="form-control" name="Carrier_land" id="Carrier_land" value="--Select Type--">
-                      <option value="select">--Select Type--</option>  
-                      <?php 
-
-foreach($carrierlist as $carrier)
-{ 
-  echo '<option value="'.$carrier->name.'" id="'.$carrier->id.'">'.$carrier->name.'</option>';
-  
-
-}
-?>
-                    </select>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
                 </div>
                 <div class="form-group col-md-4">
                     <label class="control-label">PO no. </label>
@@ -707,145 +468,6 @@ foreach($userlist as $user)
                       </select>
                 </div>  
             </div>
-<<<<<<< HEAD
-         </div>
-            <div class="col-md-12 ">
-                <div class="panel panel-primary setup-content " id="step-3">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Consignment</h3>
-                    </div>
-                    <div class="panel-body">
-                        <section class="content">
-
-                            <div class="col-md-10">
-                                <h4 class="box-title">Job</h4>
-                                <div class="box box-primary">
-                                    <div class="box-header with-border">
-                                        <div class="box-body">
-
-                                            <div class="form-group col-md-1">
-
-                                                <input type="hidden" id="estimate_code" name="code" class="form-control" placeholder="<?php echo $codes[0]->estimate_no + 1; ?>" readonly="readonly" value="<?php echo $codes[0]->estimate_no + 1; ?>">
-
-                                                <label class="control-label">Code</label>
-                                                <input maxlength="100" onchange="getdata();" type="text" id="desc_code" class="form-control" placeholder=" code" />
-                                            </div>
-                                            <div class="form-group col-md-2">
-                                                <label class="control-label">Description</label>
-                                                <input maxlength="100" type="text" id="description_job" class="form-control" placeholder=" Description" value="" />
-                                                <input type="hidden" id="description_id" class="form-control" value="<?php echo $values[0]->JobId; ?>" />
-                                            </div>
-                                            <div class="form-group col-md-2">
-                                                <label class="control-label">Unit Price</label>
-                                                <input maxlength="100" type="text" id="unitprice" class="form-control " placeholder=" unit price" />
-                                            </div>
-                                            <div class="form-group col-md-2">
-                                                <label class="control-label">Currency</label>
-                                                <select class="form-control" id="unit_price" name="unit_price" value="--Select Type--">
-                                                    <option value="bank">--Select Type--</option>
-                                                    <?php
-
-                                                    foreach ($currencylist as $currency) {
-                                                        echo '<option value="' . $currency->currency . '" id="' . $currency->id . '">' . $currency->currency . '</option>';
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-2">
-                                                <label class="control-label">Conv.Factor</label>
-                                                <input maxlength="100" type="text" id="conv_factor" class="form-control " placeholder=" conv.factor" />
-                                            </div>
-                                            <div class="form-group col-md-2">
-                                                <label class="control-label">Quantity</label>
-                                                <input maxlength="100" type="text" id="quantity" class="form-control " placeholder=" quantity" />
-                                            </div>
-                                            <div class="form-group col-md-1">
-                                                <label class="control-label">VAT</label>
-                                                <input maxlength="100" type="text" id="vat" class="form-control" placeholder=" vat" />
-                                            </div>
-
-                                            <input type="submit" name="add" value="ADD" id="add" class="btn btn-success" style="float: right;">
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div>
-                                                <!-- /.box-header -->
-                                                <div class="">
-                                                    <div id="ContentPlaceHolder1_upDataList">
-
-                                                        <table id="datatable" class="table table-striped table-bordered">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Description</th>
-                                                                    <th>UnitPrice</th>
-                                                                    <th>Quantity</th>
-                                                                    <th>SubTotal</th>
-                                                                    <th>VAT</th>
-                                                                    <th>TOTAL</th>
-                                                                    <th></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody class="dataadd">
-
-                                                            </tbody>
-                                                            <tfoot>
-                                                            </tfoot>
-                                                        </table>
-                                                    </div>
-                                                    <div id="ContentPlaceHolder1_upTotals">
-                                                        <div style="float: right;">
-                                                            <span id="ContentPlaceHolder1_lbl">TOTAL</span>
-                                                            <input name="total" type="text" value="" readonly="readonly" id="total" class="form-control " style="width: 100%;">
-                                                            <span id="ContentPlaceHolder1_Label1">Vat Total</span>
-                                                            <input name="vat_total" type="text" value="" readonly="readonly" id="vat_total" class="form-control " style="width: 100%;">
-                                                            <span id="ContentPlaceHolder1_Label2">Grand Total</span>
-                                                            <input name="grand_total" type="text" value="" readonly="readonly" id="grand_total" class="form-control " style="width: 100%;">
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.box-body -->
-                                                </div>
-                                                <!-- /.box -->
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-2">
-                                <h4 class="box-title">Job Description </h4>
-                                <div class="box box-primary">
-                                    <div class="box-header with-border">
-                                    </div>
-                                    <div class="box-body">
-                                        <strong><i class=""></i> Job</strong>
-                                        <p class="text-dark" id="job_code">
-                                        </p>
-                                        <hr>
-                                        <strong><i class=""></i> Shipper</strong>
-                                        <p class="text-dark" id="shipper_name"> </p>
-                                        <hr>
-                                        <strong><i class=""></i> Consignee</strong>
-                                        <p class="text-dark" id="consignee_name"> </p>
-                                        <hr>
-                                        <strong><i class=""></i> Client Company</strong>
-                                        <p class="text-dark" id="company_name"> </p>
-                                        <hr>
-                                        <strong><i class=""></i> Shipment Terms</strong>
-                                        <p class="text-dark" id="shpmnt_terms"> </p>
-                                        <hr>
-                                        <strong><i class=""></i> Consignment description</strong>
-                                        <p class="text-dark" id="consign_desc"> </p>
-                                    
-                                    </div>
-
-                                </div>
-                                <input type="submit" name="submit" onclick="add_estimate();" value="Submit" id="submit" class="btn btn-success">
-                            </div>
-                            <!-- <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>  -->
-=======
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
 
                 <button class="btn btn-primary nextBtn pull-right" onclick="update();" type="button" >Next</button>
             </div>
@@ -973,10 +595,6 @@ foreach($currencylist as $currency)
 </div>
 
 
-<<<<<<< HEAD
-             
-        <!-- <div class="col-md-11 ">
-=======
 
 
 
@@ -1022,7 +640,6 @@ foreach($currencylist as $currency)
 
       
         <div class="col-md-11 ">
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         <div class="panel panel-primary setup-content" id="step-4" >
             <div class="panel-heading">
                  <h3 class="panel-title">Job Details</h3>
@@ -1030,11 +647,7 @@ foreach($currencylist as $currency)
             <div class="panel-body">
             <div class=" row">
             <div class="form-group  col-md-12">
-<<<<<<< HEAD
-                    <label class="control-label ">View Job Details</label><br><br> 
-=======
                     <!-- <label class="control-label ">View Job Details</label><br><br> -->
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
                   
                    
            
@@ -1042,17 +655,9 @@ foreach($currencylist as $currency)
               </div>
 
                      <button class="btn btn-success pull-right" type="submit">Finish!</button>
-<<<<<<< HEAD
-            </div> 
-        </div></div> -->
-
-
-</form>
-=======
             </div>
         </div></div>
     </form>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
 </div>
 
 
@@ -1061,14 +666,14 @@ foreach($currencylist as $currency)
 <!-- <script src="<?php echo base_url(); ?>/assets/user_scripts/transaction/plannes_script.js"></script> -->
 <script src="<?php echo base_url(); ?>/assets/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>   
 <script type="text/javascript">
-<<<<<<< HEAD
+
     $(document).ready(function() {
         $('#jobsubmit').click(function() {
             update();
             jobdetails();
         });
     });
-=======
+
 //show selected div only 
 $(document).ready(function(){
 $('#air').click(function(){
@@ -1108,7 +713,7 @@ function hideall()
     $('#landsection').addClass("hidden");
 //     $('#othersection').addClass("hidden");
  }
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
+
 
 
 

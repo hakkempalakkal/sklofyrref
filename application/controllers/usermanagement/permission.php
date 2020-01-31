@@ -51,7 +51,7 @@ class permission extends CI_Controller {
 	{
 		$postdata=$this->input->post('postData');
 		$result= $this->Permission_model->add($postdata);
-		echo 'success';
+		echo json_encode($result);
 		
 	}
 	public function edit()
@@ -78,7 +78,7 @@ class permission extends CI_Controller {
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
 		$result= $this->Permission_model->update($id,$data);
-		echo 'success';
+		echo json_encode($result);
 		
 	}
 

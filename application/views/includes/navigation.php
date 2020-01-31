@@ -81,11 +81,8 @@
               <ul class="treeview-menu">
               <?php 
           
-<<<<<<< HEAD
-=======
-              <?php 
-          
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
+
+
           if (in_array("read bank",$permission))
           { 
              ?>
@@ -107,14 +104,8 @@
           if (in_array("read client",$permission))
           { 
              ?>
-<<<<<<< HEAD
                <li><a href="<?php echo base_url(); ?>client"><i class="fa fa-circle-o"></i> Manage Client</a></li>
                <?php
-=======
-
-               <li><a href="<?php echo base_url(); ?>client"><i class="fa fa-circle-o"></i> Manage Client</a></li>
-                <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
          <?php 
@@ -122,10 +113,6 @@
           if (in_array("read supplier",$permission))
           { 
              ?>
-<<<<<<< HEAD
-               
-=======
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
                 <li><a href="<?php echo base_url(); ?>supplier"><i class="fa fa-circle-o"></i> Manage Supplier</a></li>
                 <?php
         }
@@ -173,12 +160,8 @@
                 <i class=" fa fa-exchange"></i> <span>Transaction </span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-<<<<<<< HEAD
               <!-- <li><a href="<?php echo base_url(); ?>job"><i class="fa fa-circle-o"></i>Job </a></li> -->
               <li><a href="<?php echo base_url(); ?>list-job"><i class="fa fa-circle-o"></i>List Job  </a></li>
-=======
-              <li><a href="<?php echo base_url(); ?>list-job"><i class="fa fa-circle-o"></i>Job List</a></li>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         
               </ul>
             </li>
@@ -199,11 +182,7 @@
             <?php
         }
         ?>
-<<<<<<< HEAD
         <?php 
-=======
-         <?php 
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           
           if (in_array("read supplier search",$permission))
           { 
@@ -239,16 +218,8 @@
             <li class="treeview">
               <a href="<?php echo base_url(); ?>list-supplier">
                 <i class="fa fa-search"></i> <span> Supplier Payment</span> <i class=" pull-right"></i>
-<<<<<<< HEAD
               </a></li>
               <?php
-=======
-              </a>
-            
-             
-            </li>
-            <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
             <?php 
@@ -256,12 +227,7 @@
           if (in_array("read clientreceipt",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li class="treeview">
-=======
-            <li class="treeview">
-             
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
               <a href="<?php echo base_url(); ?>clientpaymentlist">
                 <i class="fa fa-search"></i> <span> client reciept</span> <i class=" pull-right"></i>
               </a>
@@ -288,73 +254,42 @@
           { 
              ?>
               <li><a href="<?php echo base_url(); ?>job-reports"><i class="fa fa-circle-o"></i>Job Reports</a></li>
-<<<<<<< HEAD
               <?php } ?>
-=======
-          <?php } ?>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           <?php 
           
           if (in_array("read nonbilledreports",$permission))
           { 
              ?>
-<<<<<<< HEAD
                <li><a href="<?php echo base_url(); ?>non-billed-jobs"><i class="fa fa-circle-o"></i>Non Billed Jobs </a></li>
                <?php } ?>
-=======
-              <li><a href="<?php echo base_url(); ?>non-billed-jobs"><i class="fa fa-circle-o"></i>Non Billed Jobs </a></li>
-              <?php } ?>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           <?php 
           
           if (in_array("read invoicereports",$permission))
           { 
              ?>
-<<<<<<< HEAD
                <li><a href="<?php echo base_url(); ?>invoice-reports"><i class="fa fa-circle-o"></i>Invoice Report </a></li>
                <?php } ?>
-=======
-              <li><a href="<?php echo base_url(); ?>invoice-reports"><i class="fa fa-circle-o"></i>Invoice Report </a></li>
-              <?php } ?>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           <?php 
           
           if (in_array("read pendinginvoice",$permission))
           { 
-<<<<<<< HEAD
              ?> 
                <li><a href="<?php echo base_url(); ?>pending-invoice"><i class="fa fa-circle-o"></i>Pending Invoice </a></li>
                <?php } ?>
-=======
-             ?>
-              <li><a href="<?php echo base_url(); ?>pending-invoice"><i class="fa fa-circle-o"></i>Pending Invoice </a></li>
-              <?php } ?>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           <?php 
           
           if (in_array("read billreport",$permission))
           { 
-<<<<<<< HEAD
              ?> 
                <li><a href="<?php echo base_url(); ?>bill-report"><i class="fa fa-circle-o"></i>Bill Report </a></li>
                <?php } ?>
-=======
-             ?>
-              <li><a href="<?php echo base_url(); ?>bill-report"><i class="fa fa-circle-o"></i>Bill Report </a></li>
-              <?php } ?>
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           <?php 
           
           if (in_array("read pendingbills",$permission))
           { 
              ?>
-<<<<<<< HEAD
                <li><a href="<?php echo base_url(); ?>pending-bills"><i class="fa fa-circle-o"></i>Pending Bills</a></li>
                <?php } ?>  
-=======
-              <li><a href="<?php echo base_url(); ?>pending-bills"><i class="fa fa-circle-o"></i>Pending Bills</a></li>
-              <?php } ?>      
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
               </ul>
             </li>
             <?php
@@ -370,23 +305,13 @@
                 <i class=" fa fa-credit-card"></i> <span>Accounts </span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-<<<<<<< HEAD
               <?php 
-=======
-           
-          <?php 
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           
           if (in_array("create ledgergroup",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li><a href="<?php echo base_url(); ?>create-ledger-group"><i class="fa fa-circle-o"></i>Create Ledger Group</a></li>
               <?php
-=======
-                 <li><a href="<?php echo base_url(); ?>create-ledger-group"><i class="fa fa-circle-o"></i>Create Ledger Group</a></li>
-                 <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
           <?php 
@@ -394,13 +319,8 @@
           if (in_array("create ledger",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li><a href="<?php echo base_url(); ?>create-ledger"><i class="fa fa-circle-o"></i>Create Ledger</a></li>
               <?php
-=======
-                 <li><a href="<?php echo base_url(); ?>create-ledger"><i class="fa fa-circle-o"></i>Create Ledger</a></li>
-                 <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
           <?php 
@@ -408,13 +328,8 @@
           if (in_array("create accountsentry",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li><a href="<?php echo base_url(); ?>accounts-entry"><i class="fa fa-circle-o"></i>Accounts Entry</a></li>
               <?php
-=======
-                 <li><a href="<?php echo base_url(); ?>accounts-entry"><i class="fa fa-circle-o"></i>Accounts Entry</a></li>
-                 <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
           <?php 
@@ -422,13 +337,8 @@
           if (in_array("read daybook",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li><a href="<?php echo base_url(); ?>day-book"><i class="fa fa-circle-o"></i>Day Book</a></li>
               <?php
-=======
-                 <li><a href="<?php echo base_url(); ?>day-book"><i class="fa fa-circle-o"></i>Day Book</a></li>
-                 <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
           <?php 
@@ -436,13 +346,8 @@
           if (in_array("read trialbalance",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li><a href="<?php echo base_url(); ?>trial-balance"><i class="fa fa-circle-o"></i>Trial Balance</a></li>
               <?php
-=======
-                 <li><a href="<?php echo base_url(); ?>trial-balance"><i class="fa fa-circle-o"></i>Trial Balance</a></li>
-                 <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
           <?php 
@@ -450,13 +355,8 @@
           if (in_array("read balancesheet",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li><a href="<?php echo base_url(); ?>balance-sheet"><i class="fa fa-circle-o"></i>Balance Sheet</a></li>
               <?php
-=======
-                 <li><a href="<?php echo base_url(); ?>balance-sheet"><i class="fa fa-circle-o"></i>Balance Sheet</a></li>
-                 <?php
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
         }
         ?>
           <?php 
@@ -464,7 +364,6 @@
           if (in_array("read ledgerview",$permission))
           { 
              ?>
-<<<<<<< HEAD
               <li><a href="<?php echo base_url(); ?>ledger-view"><i class="fa fa-circle-o"></i>Ledger View</a></li>
               <?php
         }
@@ -473,18 +372,6 @@
             </li>
             <?php } ?>
             <?php 
-=======
-                 <li><a href="<?php echo base_url(); ?>ledger-view"><i class="fa fa-circle-o"></i>Ledger View</a></li>
-                 <?php
-        }
-        ?>
-        
-                </ul>
-            </li>
-          
-      <?php } ?>
-      <?php 
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           
           // if (in_array("read ledgerview",$permission))
           // { 
@@ -499,7 +386,6 @@
               
               </ul>
             </li>
-<<<<<<< HEAD
             <!-- 
     
                   </ul>
@@ -515,12 +401,6 @@
             <?php
         // }
         ?>
-=======
-            <?php
-        // }
-        ?>
-            
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
           </ul>
         </section>
         <!-- /.sidebar -->

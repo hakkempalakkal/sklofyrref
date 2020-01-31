@@ -45,7 +45,7 @@
                            </div>
                         </div>
                         <div class="row">
-                           <div class="form-group col-md-1">
+                           <div class="form-group col-md-2">
                               <label class="control-label"></label>
                               <input maxlength="100"  onchange="getdata();" type="text" id="desc_code" name="desc_code" required="required" class="form-control" placeholder=" code" />
                            </div>
@@ -71,10 +71,7 @@
                                   <?php
                                   }
                                    ?>
-<<<<<<< HEAD
                                  </select>
-=======
->>>>>>> 2f1ccf633a06654e4603b757a8c527222a04656f
                                  </select>
                              
                               </div>
@@ -138,8 +135,8 @@
                         <div class="row">
                            <div class="form-group col-md-4">
                               <label class="control-label">BANK*</label>
-                              <select class="form-control" id="bank" name="bank"  value="">
-                              <option value="bank">--Select Bank--</option>
+                              <select class="form-control" required="required" id="bank" name="bank"  value="">
+                              <option value="">--Select Bank--</option>
 
                                <?php
                                     foreach($bank as $key=>$value)
@@ -227,7 +224,7 @@
                      </div>
                   </div>
                </div>
-               <button class="btn btn-primary nextBtn pull-right" style=" margin-top:20px;" type="button">Next</button>
+               <!-- <button class="btn btn-primary nextBtn pull-right" style=" margin-top:20px;" type="button">Next</button> -->
             </div>
          </div>
       </div>

@@ -54,8 +54,8 @@ class Currency extends CI_Controller {
 		$postdata=$this->input->post('postData');
 		
 		$result= $this->Currency_model->add($postdata);
-		echo 'success';
-		
+		// echo 'success';
+		echo json_encode($result);	
 	}
 	public function edit()
 	{
@@ -80,7 +80,8 @@ class Currency extends CI_Controller {
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
 		$result= $this->Currency_model->update($id,$data);
-		echo 'success';
+		// echo 'success';
+		echo json_encode($result);
 		
 	}
 	//update status

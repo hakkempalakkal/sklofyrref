@@ -62,8 +62,9 @@ class Client extends CI_Controller {
 		// $clientname = $this->Client_model->client_name($clientid);
 		// $accountsid = $this->Client_model->addto_accountsledger($clientname);
 		// $res = $this->Client_model->addto_clientledger($clientid,$accountsid);
-		echo "success";
-		
+		$result="success";
+		echo json_encode($result);
+
 	}
 
 	public function edit()
@@ -88,7 +89,8 @@ class Client extends CI_Controller {
 		$data=$postdata["postData1"];
 		$id=$postdata["id"];
 		$result= $this->Client_model->update($id,$data);
-		echo 'success';
+		
+		echo json_encode($result);
 		
 	}
 	//update status

@@ -18,8 +18,8 @@ class Client_searchmodel extends CI_Model {
 
  public function getclient_view($clientid,$from,$to)
  {
- 
-
+ //,$from,$to
+//  WHERE Dates BETWEEN  CAST('".$from."' AS DATE) AND CAST('".$to."' AS DATE)
 
     $dataq="select * from(SELECT  concat('Invoice for the job no:',jm_invoicemaster.JobId) as particulars,'credit invoice' as vouchertypes,convert(jm_invoicemaster.Date,date ) as Dates ,'Invoice -'+Inv As Descriptions,jm_invoicemaster.GrandTotal as Debit,0 as Credit,jm_invoicemaster.Inv as invoice
     FROM jm_invoicemaster
@@ -38,7 +38,7 @@ SELECT DISTINCT 'payment' as particulars, 'Reciept'as vouchertypes,convert(jm_re
       inner join jm_job on jm_job.JobId=jm_creditnote_master.JobId
     INNER JOIN mst_client ON jm_job.client_id = mst_client.id
     where jm_job.client_id=  ".$clientid."  
-) as abc   WHERE Dates BETWEEN  CAST('".$from."' AS DATE) AND CAST('".$to."' AS DATE)
+) as abc WHERE Dates BETWEEN '".$from."'  AND '".$to."' 
 ORDER BY `abc`.`Dates`  ASC;";
 
      $query = $this->db->query($dataq);

@@ -164,12 +164,14 @@ $( document ).ready(function() {
         dataType: 'JSON'
         });
       request.done( function ( data ) {
-   
+        console.log(data);
+       
+        window.location.href='../supplier-expense-print/'+data
+
       });
       request.fail( function ( jqXHR, textStatus) {
       //   console.log(jqXHR)
       // alert(0);
-      window.location.href='../supplier-expense-print/'+exp_code
         });
   
     }

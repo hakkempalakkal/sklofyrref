@@ -217,7 +217,7 @@
              ?>
             <li class="treeview">
               <a href="<?php echo base_url(); ?>list-supplier">
-                <i class="fa fa-search"></i> <span> Supplier Payment</span> <i class=" pull-right"></i>
+                <i class="fa  fa-credit-card"></i> <span> Supplier Payment</span> <i class=" pull-right"></i>
               </a></li>
               <?php
         }
@@ -275,21 +275,27 @@
           { 
              ?> 
                <li><a href="<?php echo base_url(); ?>pending-invoice"><i class="fa fa-circle-o"></i>Pending Invoice </a></li>
-               <?php } ?>
+               <?php 
+              } 
+              ?>
           <?php 
           
           if (in_array("read billreport",$permission))
           { 
              ?> 
                <li><a href="<?php echo base_url(); ?>bill-report"><i class="fa fa-circle-o"></i>Bill Report </a></li>
-               <?php } ?>
+               <?php 
+              }
+               ?>
           <?php 
           
           if (in_array("read pendingbills",$permission))
           { 
              ?>
                <li><a href="<?php echo base_url(); ?>pending-bills"><i class="fa fa-circle-o"></i>Pending Bills</a></li>
-               <?php } ?>  
+               <?php 
+              } 
+              ?>  
               </ul>
             </li>
             <?php
@@ -321,7 +327,7 @@
              ?>
               <li><a href="<?php echo base_url(); ?>create-ledger"><i class="fa fa-circle-o"></i>Create Ledger</a></li>
               <?php
-        }
+          }
         ?>
           <?php 
           
@@ -330,7 +336,7 @@
              ?>
               <li><a href="<?php echo base_url(); ?>accounts-entry"><i class="fa fa-circle-o"></i>Accounts Entry</a></li>
               <?php
-        }
+          }
         ?>
           <?php 
           
@@ -339,7 +345,7 @@
              ?>
               <li><a href="<?php echo base_url(); ?>day-book"><i class="fa fa-circle-o"></i>Day Book</a></li>
               <?php
-        }
+          }
         ?>
           <?php 
           
@@ -348,7 +354,7 @@
              ?>
               <li><a href="<?php echo base_url(); ?>trial-balance"><i class="fa fa-circle-o"></i>Trial Balance</a></li>
               <?php
-        }
+          }
         ?>
           <?php 
           
@@ -357,7 +363,7 @@
              ?>
               <li><a href="<?php echo base_url(); ?>balance-sheet"><i class="fa fa-circle-o"></i>Balance Sheet</a></li>
               <?php
-        }
+          }
         ?>
           <?php 
           
@@ -366,7 +372,7 @@
              ?>
               <li><a href="<?php echo base_url(); ?>ledger-view"><i class="fa fa-circle-o"></i>Ledger View</a></li>
               <?php
-        }
+          }
         ?>
             </ul>
             </li>
@@ -381,14 +387,13 @@
                 <i class=" fa fa-wrench"></i> <span>Settings </span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Company Settings </a></li>
-               <li><a href="#"><i class="fa fa-circle-o"></i>Invoice Settings </a></li>
+              <li><a href="<?php echo base_url(); ?>basic-settings"><i class="fa fa-circle-o"></i>Basic Settings </a></li>
+               <!-- <li><a href="#"><i class="fa fa-circle-o"></i>Invoice Settings </a></li> -->
               
               </ul>
             </li>
             <!-- 
-    
-                  </ul>
+                </ul>
                 </li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
               </ul>

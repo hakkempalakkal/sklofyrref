@@ -28,17 +28,16 @@
       });
       request.done( function ( data ) {
   
-      if(!alert('shipper Created Successfully!')){window.location.href="shipper"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-        alert('shipper Created Successfully!');
-        window.location.reload();
-        if (jqXHR.responseText=="success")
-        {
-         if(!alert('shipper created Successfully!')){window.location.href="shipper"}
-     
-        }
-      });
+        console.log(data)
+      
+        alert('Shipper created Successfully!');
+        window.location.href="shipper"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Shipper Creation  Failed!');
+        
+         });
   
     }
     //update
@@ -71,16 +70,16 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-     
-      if(!alert('shipper updated Successfully!')){window.location.href="shipper"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-       
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('shipper updated Successfully!')){window.location.href="shipper"}
+        console.log(data)
+      
+        alert('Shipper Updated Successfully!');
+        window.location.href="shipper"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Shipper Updation  Failed!');
+        
+         });
     
-       }
-      });
     }
     

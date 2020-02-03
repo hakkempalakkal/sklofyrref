@@ -51,20 +51,16 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-      //  console.log(data);
-      if(!alert('roles Created Successfully!')){window.location.href="roles"}
-      });
-      // request.fail( function ( jqXHR, textStatus) {
-  
-      // });
-      request.fail( function ( jqXHR, textStatus) {
-       
-        if (jqXHR.responseText=="success")
-        {
-         if(!alert('roles created Successfully!')){window.location.href="roles"}
-     
-        }
-       });
+        console.log(data)
+      
+        alert('Role Created Successfully!');
+        window.location.href="roles"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Role Creation  Failed!');
+        
+         });
     }
 
 
@@ -119,20 +115,16 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-        //console.log(data);
-        alert('roles updated Successfully!');
-    //   if(!alert('roles updated Successfully!')){window.location.reload();}
-    //  {window.location.href="roles"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-        alert('roles updated Successfully!');
-        window.location.href="roles";
-      //  if (jqXHR.responseText=="success")
-      //  {
-      //   if(!alert('roles updated Successfully!')){window.location.href="roles"}
-    
-      //  }
-      });
+        console.log(data)
+      
+      alert('Role Updated Successfully!');
+      window.location.href="roles"
+       });
+       request.fail( function ( jqXHR, textStatus) {
+         // console.log("ghjgbjjh")
+         alert('Role Updation  Failed!');
+      
+       });
     }
 
     function mytest()

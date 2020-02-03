@@ -154,12 +154,13 @@ function insert_payment_receipt() {
           dataType: 'JSON'
           });
         request.done( function ( data ) {
-            alert("payment receipt Created Successfully!!!!!");
+          window.location.href='../payment-receipt-print/'+data
+
 
         });
         request.fail( function ( jqXHR, textStatus) {
       
-        alert("payment receipt Created Successfully");
+        alert("payment receipt Creation failed");
        
 
           });

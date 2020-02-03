@@ -19,17 +19,17 @@
       });
       request.done( function ( data ) {
   
-      if(!alert('currency Created Successfully!')){window.location.href="currency"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-        alert('Currency Created Successfully!');
-        window.location.reload();
-        if (jqXHR.responseText=="success")
-        {
-         if(!alert('currency created Successfully!')){window.location.href="currency"}
-     
-        }
-      });
+        console.log(data)
+      
+        alert('Currerncy created Successfully!');
+        window.location.href="currency"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Currerncy Creation  Failed!');
+        
+         });
+  
   
     }
     //update
@@ -54,14 +54,15 @@
       });
       request.done( function ( data ) {
      
-      if(!alert('currency updated Successfully!')){window.location.href="currency"}
+     alert('currency updated Successfully!');
+     window.location.href="currency";
       });
       request.fail( function ( jqXHR, textStatus) {
        
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('currency updated Successfully!')){window.location.href="currency"}
+     
+       alert('Currency updaion Failed!');
+       window.location.href="currency";
     
-       }
+   
       });
     }

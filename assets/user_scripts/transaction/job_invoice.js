@@ -37,11 +37,11 @@ var request = $.ajax({
   dataType: 'JSON'
   });
   request.done( function (result) {
-    console.log(result);
+    // console.log(result);
   var values=JSON.stringify(result);
   $("#description_job").val(result[0].description);
   $("#description_id").val(result[0].id);
-console.log(result[0].id);
+// console.log(result[0].id);
   });
 
 }
@@ -149,7 +149,7 @@ var postData = {
   JobDetails: JobDetails,
   JobData: JobData
     };
-    console.log(postData);
+    // console.log(postData);
     var request = $.ajax({
       url: '../insert-job-details',
       type: 'POST',
@@ -157,12 +157,13 @@ var postData = {
       dataType: 'JSON'
       });
     request.done( function ( data ) {
- 
+ console.log(data)
+  window.location.href='../invoice-print/'+data
+
     });
     request.fail( function ( jqXHR, textStatus) {
-    //   console.log(jqXHR)
+      // console.log("hjk")
     // alert("Job Invoice Created Successfully");
-    window.location.href='../invoice-print/'+inv_code
       });
 
   }

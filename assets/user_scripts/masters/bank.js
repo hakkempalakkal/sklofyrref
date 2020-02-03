@@ -24,20 +24,17 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
+      console.log(data)
       
-        if(!alert('bank Created Successfully!')){window.location.href="bank"}
-        });
-        request.fail( function ( jqXHR, textStatus) {
-          window.location.reload()
-          alert('bank Created Successfully!');
-   
+     alert('Bank Created Successfully!');
+     window.location.href="bank"
+      });
+      request.fail( function ( jqXHR, textStatus) {
+        // console.log("ghjgbjjh")
+        alert('Bank Creation  Failed!');
      
-          if (jqXHR.responseText=="success")
-          {
-           if(!alert('bank created Successfully!')){window.location.href="bank"}
+      });
        
-          }
-        });
     
       }
     //update
@@ -68,16 +65,15 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-     
-      if(!alert('bank updated Successfully!')){window.location.reload();}
+        console.log(data)
+
+     alert('bank updated Successfully!');
+     window.location.href="bank"
       });
       request.fail( function ( jqXHR, textStatus) {
-        alert('bank updated Successfully!');
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('bank updated Successfully!')){window.location.reload();}
-    
-       }
+        // console.log("ghjgbjjh")
+        alert('bank updation failed!');
+     
       });
   
     }

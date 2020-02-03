@@ -20,19 +20,17 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
+        console.log(data)
       
-      if(!alert('description Created Successfully!')){window.location.href="description"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-        alert('description Created Successfully!');
-        window.location.reload();
-        if (jqXHR.responseText=="success")
-        {
+        alert('Description created Successfully!');
+        window.location.href="description"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Description Creation  Failed!');
         
-         if(!alert('description created Successfully!')){window.location.href="description"}
-     
-        }
-      });
+         });
+  
   
     }
     //update
@@ -59,15 +57,15 @@
       });
       request.done( function ( data ) {
      
-      if(!alert('description updated Successfully!')){window.location.href="description"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-       
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('description updated Successfully!')){window.location.href="description"}
-    
-       }
-      });
+        console.log(data)
+      
+        alert('Description updated Successfully!');
+        window.location.href="description"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Description updation  Failed!');
+        
+         });
     }
  

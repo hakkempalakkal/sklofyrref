@@ -145,7 +145,7 @@ $route['supplier-update'] = 'masters/Supplier/update';
 //master client
 
 $route['client'] = 'masters/Client/index';
-$route['clientpaymentlist'] = 'masters/Client/indexpayment';
+$route['clientpaymentlist'] = 'masters/Client/payment';
 
 $route['client-create'] = 'masters/Client/create';
 $route['client-edit'] = 'masters/Client/edit';
@@ -317,3 +317,6 @@ $route['supplier-data/(:any)'] = 'suppliersearch/Supplier_Search/get_supplierdet
 //client search
 $route['client-search'] = 'clientsearch/Client_Search/client_search';
 $route['client-data'] = 'clientsearch/Client_Search/get_clientsearchdetails';
+//settings
+$route['basic-settings'] = 'Settings/Settings_controller/basic_settings';
+$route['update-basic-settings'] = 'Settings/Settings_controller/update_basic_settings';

@@ -158,10 +158,10 @@ function getdata()
         dataType: 'JSON'
         });
       request.done( function ( data ) {
-   
+        window.location.href='../credit-note-print/'+data
       });
       request.fail( function ( jqXHR, textStatus) {
-        window.location.href='../credit-note-print/'+credit_code
+      
         });
   
     }

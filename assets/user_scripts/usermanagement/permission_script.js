@@ -19,13 +19,16 @@
     dataType: 'JSON'
     });
     request.done( function ( data ) {
-      alert('permission Created Successfully!');
-   
-    });
-    request.fail( function ( jqXHR, textStatus) {
-      alert('permission Created Successfully!');
-    
-    });
+      console.log(data)
+      
+      alert('Permission Created Successfully!');
+      window.location.href="permission"
+       });
+       request.fail( function ( jqXHR, textStatus) {
+         // console.log("ghjgbjjh")
+         alert('Permission Creation  Failed!');
+      
+       });
 
   }
   //update
@@ -51,12 +54,14 @@
     dataType: 'JSON'
     });
     request.done( function ( data ) {
-      // alert('permission updated Successfully!');
-
-    });
-    request.fail( function ( jqXHR, textStatus) {
-      alert('permission updated Successfully!');
-      window.location.href="permission";
-  
-    });
+      console.log(data)
+      
+      alert('Permission Updated Successfully!');
+      window.location.href="permission"
+       });
+       request.fail( function ( jqXHR, textStatus) {
+         // console.log("ghjgbjjh")
+         alert('Permission Updation  Failed!');
+      
+       });
   }

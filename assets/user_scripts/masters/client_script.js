@@ -35,17 +35,16 @@
       });
       request.done( function ( data ) {
     
-      if(!alert('client Created Successfully!')){window.location.href="client"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-        alert('client Created Successfully!');
-        window.location.reload();
-        if (jqXHR.responseText=="success")
-        {
-         if(!alert('client created Successfully!')){window.location.href="client"}
-     
-        }
-      });
+        console.log(data)
+      
+        alert('Client created Successfully!');
+        window.location.href="client"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Client Creation  Failed!');
+        
+         });
   
     }
     //update
@@ -85,17 +84,17 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-     
-      if(!alert('client updated Successfully!')){window.location.href="client"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-        alert('client updated Successfully!');
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('client updated Successfully!')){window.location.href="client"}
-    
-       }
-      });
+        console.log(data)
+      
+        alert('Client Updated Successfully!');
+        window.location.href="client"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Client Updation  Failed!');
+        
+         });
+  
     }
       //check already existing acc no
 

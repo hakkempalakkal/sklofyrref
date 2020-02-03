@@ -1,3 +1,4 @@
+var job_id=0;
 var baseurl=$('#baseurl').val();
 $( document ).ready(function() {
     $('#description').addClass("hidden");
@@ -33,7 +34,7 @@ var request = $.ajax({
   dataType: 'JSON'
   });
   request.done( function (result) {
-    // console.log(result);
+    console.log(result);
   
    var values=JSON.stringify(result);
   //  alert(values[0].JobId);
@@ -44,6 +45,7 @@ var request = $.ajax({
   $("#client").text(result["jobdata"][0].clientenglish);
   $("#terms").text(result["jobdata"][0].ShipmentTerms);
  //to print invoice total
+ job_id= $('#q').val();
  
 $("#invctotal").text(result["invoicetotal"][0].sumvalue);
 //invoice
@@ -83,7 +85,7 @@ var Invsum=0;
 
     });
     Invsum=parseFloat(Invsum).toFixed(2);
-    $(".dataadd").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='8' > Total Invoice </td><td style='text-align: right;'>"+Invsum+"</td></tr>"); 
+    $(".dataadd").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='6' > Total Invoice </td><td style='text-align: right;'>"+Invsum+"</td><td></td></tr>"); 
 
    console.log(Invsum);
     //credit note 
@@ -100,11 +102,11 @@ var Invsum=0;
        
       var amount=parseFloat(value.GrandTotal).toFixed(2);
       Creditsum=parseFloat(Creditsum)+parseFloat(amount);
-        $(".creditdata").append( "<tr class='tbl_row'><td class='sl'>"+slno+" </td> <td class='code'>"+code+"</td><td class='date'>"+date+"</td> <td class='cunstomer'>"+cunstomer+"</td> <td class='amount' style='text-align: right;' colspan='2'>"+amount+"</td> </tr>" );
+        $(".creditdata").append( "<tr class='tbl_row'><td class='sl'>"+slno+" </td> <td class='code'>"+code+"</td><td class='date'>"+date+"</td> <td class='cunstomer'>"+cunstomer+"</td> <td class='amount'  colspan='2'>"+amount+"</td> </tr>" );
 
     });
     Creditsum=parseFloat(Creditsum).toFixed(2);
-    $(".creditdata").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='5' > Total Amount </td><td style='text-align: right;'>"+Creditsum+"</td></tr>"); 
+    $(".creditdata").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='4' > Total Amount </td><td >"+Creditsum+"</td></tr>"); 
 
     //payment receipt
     var slno=0;
@@ -115,8 +117,8 @@ var Invsum=0;
       slno=slno+1;
        var date=value.Date;
        var doc=value.ID;
-       var particulars="";
-       var invoice="value.Date";
+       var particulars=value.particulars;
+       var invoice=value.Inv;
       //  var amount=value.SubTotal;
        var amount=parseFloat(value.SubTotal).toFixed(2);
 
@@ -141,7 +143,7 @@ var Invsum=0;
         var doc=value.PostId;
         var particulars=value.Description;;
         var status=value.Status;
-        var invoice=value.OurInv;
+        var invoice=value.invoice;
         var supplier=value.supplier_name;
          var expensemasterid=value.ExpenseMasterId;
       var amount=parseFloat(value.GrandTotal).toFixed(2);
@@ -161,7 +163,7 @@ var Invsum=0;
 
     });
     Expense=parseFloat(Expense).toFixed(2);
-    $(".postedexpense").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='8' > Total Expense</td><td style='text-align: right;'>"+Expense+"</td></tr>"); 
+    $(".postedexpense").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='6' > Total Expense</td><td style='text-align: right;'>"+Expense+"</td><td></td></tr>"); 
 
     var debitnote=0;
     var slno=0;
@@ -173,18 +175,18 @@ var Invsum=0;
         var date=value.InvDate;
       
         var doc=value.Code_Id;
-        // var particulars="";
-        var invoice=value.OurInv;
+         var particulars=value.Description;
+        var invoice=value.Inv;
         var supplier=value.supplier_name;
    
       var amount=parseFloat(value.GrandTotal).toFixed(2);
       debitnote=parseFloat(debitnote)+parseFloat(amount);
       // total=total+amount;
-        $(".debitnote").append( "<tr class='tbl_row'><td class='sl'>"+slno+" </td> <td class='date'>"+date+"</td> <td class='doc'>"+doc+"</td> <td class='invoice'>"+invoice+"</td> <td class='supplier'>"+supplier+"</td> <td class='amount' style='text-align: right;'>"+amount+"</td> </tr>" );
+        $(".debitnote").append( "<tr class='tbl_row'><td class='sl'>"+slno+" </td> <td class='date'>"+date+"</td> <td class='doc'>"+doc+"</td><td class='particulars'>"+particulars+"</td> <td class='invoice'>"+invoice+"</td> <td class='supplier'>"+supplier+"</td> <td class='amount' style='text-align: right;'>"+amount+"</td> </tr>" );
 
     });
     debitnote=parseFloat(debitnote).toFixed(2);
-    $(".debitnote").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='5' > Total Debitnote </td><td style='text-align: right;'>"+debitnote+"</td></tr>"); 
+    $(".debitnote").append( "<tr class='tbl_row' style='background-color: #e6e6ff;'><td colspan='6' > Total Debitnote </td><td style='text-align: right;'>"+debitnote+"</td></tr>"); 
     //  console.log(total)
     var suppayment=0;
     var slno=0;
@@ -213,7 +215,7 @@ var Invsum=0;
     var debittotal=0;
     $(".ledger").html("");
     $.each(result["jobledger"], function(index, value){
-        console.log(value.Dates);
+
       slno=slno+1;
         var date=value.Dates;
         var type=value.types;
@@ -234,7 +236,7 @@ var Invsum=0;
   //  var invpaid=Invsum-Expense;
   //  invoicepaid=parseFloat(invpaid);
  var invpaid=result["invoicepaid"][0].sumvalue;
- console.log(invpaid)
+
   $("#invpaid").text(invpaid);
   var amountdue=Invsum-invpaid;
   amountdue=parseFloat(amountdue);
@@ -243,7 +245,7 @@ var Invsum=0;
 
 request.fail( function ( jqXHR, textStatus) {
       
-  console.log("dfgvbcf");
+  console.log("failed");
 
     });
 
@@ -267,9 +269,9 @@ function editexpense(masterid)
 //to create new job invoice
 function createnewinvoice()
 {
-  var jobid = $('#q').val();
-  if(jobid){
-  window.location = 'job-invoice/' + jobid;
+  // var jobid = $('#q').val();
+  if(job_id!=0){
+  window.location = 'job-invoice/' + job_id;
 }
 else{
   alert("Please Search Job");
@@ -278,10 +280,13 @@ else{
 
 function createcreditnote()
 {
-  var jobid = $('#q').val();
-  if(jobid){
-    window.location = 'credit-note/' + jobid;
+  // var jobid = $('#q').val();
+  // if(jobid){
+    // window.location = 'credit-note/' + jobid;
 
+  // }
+  if(job_id!=0){
+    window.location = 'credit-note/' + job_id;
   }
   else{
     alert("Please Search Job");
@@ -301,9 +306,12 @@ function createpaymentreceipt()
 }
 function createexpense()
 {
-  var jobid = $('#q').val();
-  if(jobid){
-  window.location = 'supplier-expense/' + jobid;
+  // var jobid = $('#q').val();
+  // if(jobid){
+  // window.location = 'supplier-expense/' + jobid;
+  // }
+  if(job_id!=0){
+    window.location = 'supplier-expense/' + job_id;
   }
   else{
     alert("Please Search Job");
@@ -312,11 +320,13 @@ function createexpense()
 }
 function createdebitnote()
 {
-  var jobid = $('#q').val();
-  if(jobid){
-  window.location = 'debit-note/' + jobid;
+  // var jobid = $('#q').val();
+  // if(jobid){
+  // window.location = 'debit-note/' + jobid;
+  // }
+  if(job_id!=0){
+    window.location = 'debit-note/' + job_id;
   }
-
    else{
     alert("Please Search Job");
   }

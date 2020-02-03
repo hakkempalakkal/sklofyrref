@@ -1,9 +1,9 @@
 
 $( document ).ready(function() {
-    // $('#chequeno').addClass("hidden");
-    // $('#chequedate').addClass("hidden");
-    // $('#bank').addClass("hidden");
-    // $('#transac_id').addClass("hidden");
+    $('#chequeno').addClass("hidden");
+    $('#chequedate').addClass("hidden");
+    $('#bank').addClass("hidden");
+    $('#transac_id').addClass("hidden");
   });
 
   function visible_paymode_details()
@@ -152,12 +152,12 @@ function insert_supplier_payment() {
           dataType: 'JSON'
           });
         request.done( function ( data ) {
-            alert("Job supplier payment Created Successfully");
+          window.location.href='../print-supplier-payment/'+data
 
         });
         request.fail( function ( jqXHR, textStatus) {
       
-        alert("Job supplier payment Created Successfully");
+        alert("Job supplier payment Creation failed");
      
           });
     

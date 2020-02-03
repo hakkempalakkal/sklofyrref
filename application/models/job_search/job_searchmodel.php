@@ -160,15 +160,16 @@ inner join mst_client c on c.id=jj.client_id
     public function select_job_ledger_details($jobid)
     {
         $datajobledger=" select * from(
-            SELECT 'Invoice'as types,convert(jm_invoicemaster.Date,date ) as Dates ,'Invoice -'+Inv As Descriptions,jm_invoicemaster.GrandTotal as Debit,0 as Credit
+            SELECT 'Invoice'as types,convert(jm_invoicemaster.Date,date ) as Dates ,concat('Invoice -',Inv) As Descriptions,jm_invoicemaster.GrandTotal as Debit,0 as Credit
         FROM jm_invoicemaster
         INNER JOIN jm_job ON jm_invoicemaster.JobId = jm_job.Number 
         where jm_job.Number=".$jobid."
         
                union all
-            SELECT DISTINCT 'Reciept'as types,convert(jm_receiptmaster.Date,date)as Dates ,'no description' as Descriptions,0 as Debit,jm_receiptmaster.SubTotal as Credit  from jm_receiptmaster 
-          inner join jm_receiptdetail on jm_receiptdetail.ReceiptMasterId=jm_receiptmaster.ReceiptMasterId
-          where jm_receiptdetail.JobNo=".$jobid."
+               SELECT DISTINCT 'Reciept'as types,convert(jm_receiptmaster.Date,date)as Dates ,concat('Total of all invoices:',jm_invoicemaster.Inv) as Descriptions,0 as Debit,jm_receiptmaster.SubTotal as Credit  from jm_receiptmaster 
+               inner join jm_receiptdetail on jm_receiptdetail.ReceiptMasterId=jm_receiptmaster.ReceiptMasterId
+               inner join jm_invoicemaster on jm_invoicemaster.InvoiceMasterId=jm_receiptdetail.InvoiceMasterID
+               where jm_receiptdetail.JobNo=".$jobid."
                   union all
             
             SELECT 'Credit Note'as types,convert(jm_creditnote_master.Date,date)as Dates ,'Credit Note'+'-'+jm_creditnote_master.Code_Id+'-'+mst_client.name AS Descriptions,0 as Debit,jm_creditnote_master.GrandTotal as Credit FROM jm_creditnote_master INNER JOIN jm_job ON jm_creditnote_master.JobId = jm_job.Number

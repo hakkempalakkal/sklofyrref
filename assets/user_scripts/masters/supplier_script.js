@@ -28,18 +28,19 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-  
-      if(!alert('Supplier Created Successfully!')){window.location.href="supplier"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
+      
+        console.log(data)
+      
         alert('Supplier Created Successfully!');
-        window.location.reload();
-        if (jqXHR.responseText=="success")
-        {
-         if(!alert('Supplier Created Successfully!')){window.location.href="supplier"}
-     
-        }
-      });
+        window.location.href="supplier"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Supplier Creation  Failed!');
+        
+         });
+  
+  
   
     }
     //update
@@ -74,16 +75,17 @@
       });
       request.done( function ( data ) {
      
-      if(!alert('supplier updated Successfully!')){window.location.href="supplier"}
-      });
-      request.fail( function ( jqXHR, textStatus) {
+        console.log(data)
+      
         alert('Supplier Updated Successfully!');
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('supplier updated Successfully!')){window.location.href="supplier"}
-    
-       }
-      });
+        window.location.href="supplier"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Supplier Updation  Failed!');
+        
+         });
+  
       
     }
   

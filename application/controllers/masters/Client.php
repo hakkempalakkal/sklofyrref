@@ -116,7 +116,7 @@ class Client extends CI_Controller {
 		echo $result;	
 	}
 
-	public function indexpayment()
+	public function payment()
 	{
 		 $user_id=	$this->session->userdata('user_id');
 	

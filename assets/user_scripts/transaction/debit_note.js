@@ -165,12 +165,12 @@ $( document ).ready(function() {
         dataType: 'JSON'
         });
       request.done( function ( data ) {
-   
+        window.location.href='../debit-note-print/'+data
+
       });
       request.fail( function ( jqXHR, textStatus) {
       //   console.log(jqXHR)
-      // alert(0);
-      window.location.href='../debit-note-print/'+debit_code
+    // alert(0);
         });
   
     }

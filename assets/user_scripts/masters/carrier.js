@@ -30,13 +30,16 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-  
-      if(!alert('carrier Created Successfully!')){window.location.reload();}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-        alert('carrier Created Successfully!');
-        window.location.reload();
-      });
+        console.log(data)
+      
+        alert('Carrier created Successfully!');
+        window.location.href="carrier"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Carrier Creation  Failed!');
+        
+         });
   
   
     }
@@ -74,17 +77,16 @@
       dataType: 'JSON'
       });
       request.done( function ( data ) {
-     
-      if(!alert('carrier updated Successfully!')){window.location.reload();}
-      });
-      request.fail( function ( jqXHR, textStatus) {
-       
-       if (jqXHR.responseText=="success")
-       {
-        if(!alert('carrier updated Successfully!')){window.location.reload();}
-    
-       }
-      });
+        console.log(data)
+      
+        alert('Carrier Updated Successfully!');
+        window.location.href="carrier"
+         });
+         request.fail( function ( jqXHR, textStatus) {
+           // console.log("ghjgbjjh")
+           alert('Carrier Updation  Failed!');
+        
+         });
   
   
     }
